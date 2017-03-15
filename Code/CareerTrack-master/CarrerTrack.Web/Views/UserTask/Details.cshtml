@@ -1,0 +1,74 @@
+﻿@model CarrerTrack.Web.Model.UserTask
+
+@{
+    ViewBag.Title = "UserTaskDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section CustomUtils {
+    <link href="@Url.Content("~/Content/CustomUtils.css")" rel="stylesheet" />
+}
+<div>
+    <br/><br />
+    <h4>
+        @Html.DisplayFor(model => model.Name)
+    </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @if (Model.Description!=null)
+            {
+                <p>@Model.Description</p>
+            }
+            else
+            {
+                <p class="fieldInfoNotAvailable">no description available</p>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToComplete)
+        </dt>
+
+        <dd>
+            @{
+                if(Model.ToComplete!=null)
+                {
+                    @Model.ToComplete.Value.ToShortDateString();
+                }
+                else
+                {
+                    <p class="fieldInfoNotAvailable">n/a</p>
+                }
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Priority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Priority)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="btn-group" role="group" aria-label="...">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-warning" })
+        @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger" })
+        @Html.ActionLink("Cancel", "Index", "Home", null, new { @class = "btn btn-default" })
+    </div>
+</p>

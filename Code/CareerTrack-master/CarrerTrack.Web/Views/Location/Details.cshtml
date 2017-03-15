@@ -1,0 +1,45 @@
+﻿@model CarrerTrack.Web.Model.Location
+
+<br/>
+<br/>
+
+@section CustomUtils {
+    <link href="@Url.Content("~/Content/CustomUtils.css")" rel="stylesheet" />
+}
+
+<div>
+    <h4>Location details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Details)
+        </dt>
+
+        @if (Model.Details != null)
+        {
+        <dd>
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+        }
+        else
+        {
+            <dd class="fieldInfoNotAvailable">
+                Description not available
+            </dd>
+        }
+    </dl>
+</div>
+<p>
+    <div class="btn-group" role="group" aria-label="...">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id  }, new{ @class="btn btn-warning"}) 
+        @Html.ActionLink("Cancel", "Index", null, new { @class="btn btn-default"})
+    </div>
+</p>

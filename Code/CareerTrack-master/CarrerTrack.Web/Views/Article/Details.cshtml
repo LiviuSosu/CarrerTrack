@@ -1,0 +1,76 @@
+﻿@model CarrerTrack.Web.Model.Article
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section CustomUtils {
+    <link href="@Url.Content("~/Content/CustomUtils.css")" rel="stylesheet" />
+}
+
+<br/>
+<h2>Article details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Link)
+        </dt>
+
+        <dd>
+            <a target="_blank" href="@Html.DisplayFor(model => model.Link)">link</a>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Source)
+        </dt>
+
+        @if (!string.IsNullOrEmpty(@Model.Source))
+        {
+        <dd>
+            @Html.DisplayFor(model => model.Source)
+        </dd>
+        }
+        else
+        {
+            <dd class="fieldInfoNotAvailable">source is not available</dd>
+        }
+        <dt>
+            @Html.DisplayNameFor(model => model.IsRead)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsRead)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+        @if (!string.IsNullOrEmpty(Model.Notes))
+        {
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+        }
+        else
+        {
+            <dd class="fieldInfoNotAvailable">you have not wrote any notes yet</dd>
+        }
+    </dl>
+</div>
+<p>
+    <div class="btn-group" aria-label="..." role="group">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ArticleId, page = ViewBag.CurrentPage }, new { @class = "btn btn-warning" }) 
+        @Html.ActionLink("Back", "Index", "Article", new  {page = Page }, new {@class="btn btn-default" })
+    </div>
+</p>

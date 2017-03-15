@@ -1,0 +1,12 @@
+C:\Users\liviu.sosu\Work\Proiecte\CareerTrack\Code\CareerTrack\CarrerTrack.Domain\bin\Debug\CarrerTrack.Domain.dll
+C:\Users\liviu.sosu\Work\Proiecte\CareerTrack\Code\CareerTrack\CarrerTrack.Domain\bin\Debug\CarrerTrack.Domain.pdb
+C:\Users\liviu.sosu\Work\Proiecte\CareerTrack\Code\CareerTrack\CarrerTrack.Domain\bin\Debug\SimpleCrypto.dll
+C:\Users\liviu.sosu\Work\Proiecte\CareerTrack\Code\CareerTrack\CarrerTrack.Domain\obj\Debug\CarrerTrack.Domain.dll
+C:\Users\liviu.sosu\Work\Proiecte\CareerTrack\Code\CareerTrack\CarrerTrack.Domain\obj\Debug\CarrerTrack.Domain.pdb
+C:\Users\liviu.sosu\Work\Proiecte\CareerTrack\Code\CareerTrack\CarrerTrack.Domain\obj\Debug\CarrerTrack.Domain.csprojResolveAssemblyReference.cache
+C:\Users\liviu.sosu\Work\Projects\Career Track\Code\CareerTrack-master\CarrerTrack.Domain\bin\Debug\CarrerTrack.Domain.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Code\CareerTrack-master\CarrerTrack.Domain\bin\Debug\CarrerTrack.Domain.pdb
+C:\Users\liviu.sosu\Work\Projects\Career Track\Code\CareerTrack-master\CarrerTrack.Domain\bin\Debug\SimpleCrypto.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Code\CareerTrack-master\CarrerTrack.Domain\obj\Debug\CarrerTrack.Domain.csprojResolveAssemblyReference.cache
+C:\Users\liviu.sosu\Work\Projects\Career Track\Code\CareerTrack-master\CarrerTrack.Domain\obj\Debug\CarrerTrack.Domain.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Code\CareerTrack-master\CarrerTrack.Domain\obj\Debug\CarrerTrack.Domain.pdb

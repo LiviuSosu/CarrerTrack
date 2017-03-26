@@ -185,10 +185,12 @@ namespace CarrerTrack.Web.Controllers
 
         private SelectList GetLocationsForDropDownControl()
         {
-            var role = Mapper.Map<IEnumerable<Location>, IEnumerable<Model.Location>>
+            var locations = Mapper.Map<IEnumerable<Location>, IEnumerable<Model.Location>>
                             (_readLocationService.GetUserLocations(loggedUser.UserId));
 
-            return new SelectList(role, "Id", "City");
+            locations = locations.OrderBy(filter => filter.City).ToList();
+
+            return new SelectList(locations, "Id", "City");
         }
 
         private List<SelectListItem> GetSkillsForDropDownControl()
@@ -200,6 +202,9 @@ namespace CarrerTrack.Web.Controllers
             {
                 ls.Add(new SelectListItem { Text = _skill.Name, Value = _skill.Id.ToString() });
             }
+
+            ls.Sort((x, y) => x.Text.CompareTo(y.Text));
+
             return ls;
         }
 
@@ -208,6 +213,8 @@ namespace CarrerTrack.Web.Controllers
             var role = Mapper.Map<IEnumerable<Role>, IEnumerable<Model.Role>>
                             (_readRoleService.GetUserRoles(loggedUser.UserId));
 
+            role = role.OrderBy(filter => filter .Name).ToList();
+
             return new SelectList(role, "Id", "Name");
         }
 
@@ -215,6 +222,8 @@ namespace CarrerTrack.Web.Controllers
         {
             var companies = Mapper.Map<IEnumerable<Company>, IEnumerable<Model.Company>>
                             (_readCompanyService.GetUserCompanies(loggedUser.UserId));
+
+            companies = companies.OrderBy(filter => filter.CompanyName).ToList();
 
             return new SelectList(companies, "CompanyId", "CompanyName"); ;
         }

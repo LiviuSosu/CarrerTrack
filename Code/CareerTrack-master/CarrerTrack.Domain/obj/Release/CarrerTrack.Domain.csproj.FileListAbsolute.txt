@@ -1,0 +1,11 @@
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Domain\bin\Release\CarrerTrack.Domain.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Domain\bin\Release\CarrerTrack.Domain.pdb
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Domain\bin\Release\SimpleCrypto.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Domain\obj\Release\CarrerTrack.Domain.csprojResolveAssemblyReference.cache
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Domain\obj\Release\CarrerTrack.Domain.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Domain\obj\Release\CarrerTrack.Domain.pdb
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Domain\bin\Release\CarrerTrack.Domain.dll.config
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Domain\bin\Release\EntityFramework.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Domain\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Domain\bin\Release\EntityFramework.xml
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Domain\bin\Release\EntityFramework.SqlServer.xml

@@ -35,3 +35,22 @@ C:\Users\liviu.sosu\Work\Projects\Career Track\Code\CareerTrack-master\CarrerTra
 C:\Users\liviu.sosu\Work\Projects\Career Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.pdb
 C:\Users\liviu.sosu\Work\Projects\Career Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.JobAddsLargerColumns.resources
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\CarrerTrack.Data.dll.config
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\CarrerTrack.Data.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\CarrerTrack.Data.pdb
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\CarrerTrack.Domain.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\EntityFramework.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\SimpleCrypto.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\CarrerTrack.Domain.pdb
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\EntityFramework.xml
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.csprojResolveAssemblyReference.cache
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.RenameKey.resources
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.RenameKey1.resources
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.RenameKey3.resources
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.CurrentMigration.resources
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.JobAddsLargerColumns.resources
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.csproj.GenerateResource.Cache
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.pdb

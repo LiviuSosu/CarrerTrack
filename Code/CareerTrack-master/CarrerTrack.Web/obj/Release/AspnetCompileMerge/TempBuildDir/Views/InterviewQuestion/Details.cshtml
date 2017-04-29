@@ -1,0 +1,56 @@
+﻿@model CarrerTrack.Web.Model.InterviewQuestion
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section CustomUtils {
+    <link href="@Url.Content("~/Content/CustomUtils.css")" rel="stylesheet" />
+}
+
+<h2>Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestionContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestionContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnswerContent)
+        </dt>
+
+        @if (Model.AnswerContent != null)
+        {
+
+        <dd>
+            @Html.DisplayFor(model => model.AnswerContent)
+        </dd>
+        }
+        else
+        {
+            <dd>
+                <p class="fieldInfoNotAvailable">Information not available</p>
+            </dd>
+        }
+        <dt>
+            @Html.DisplayName("Company")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="btn-group" aria-label="..." role="group">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class="btn btn-warning"}) 
+        @Html.ActionLink("Cancel", "Index", null, new { @class= "btn btn-default" })
+    </div>
+</p>

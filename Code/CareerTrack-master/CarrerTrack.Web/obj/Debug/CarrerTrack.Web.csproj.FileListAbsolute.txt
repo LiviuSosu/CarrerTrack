@@ -187,3 +187,5 @@ C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\Ca
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\obj\Debug\CarrerTrack.Web.csprojResolveAssemblyReference.cache
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\obj\Debug\CarrerTrack.Web.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\obj\Debug\CarrerTrack.Web.pdb
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\EntityFramework.SqlServer.xml

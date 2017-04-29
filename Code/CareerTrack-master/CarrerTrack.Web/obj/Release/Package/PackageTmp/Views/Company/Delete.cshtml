@@ -1,0 +1,57 @@
+﻿@model CarrerTrack.Web.Model.Company
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br/>
+
+<h3>Are you sure you want to stop tracing this company?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Size)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GeneralDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GeneralDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Link)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.CompanyId)
+        <div class="btn-group" role="group" aria-label="...">
+            <input type="submit" value="Delete" class="btn btn-danger" /> 
+            @Html.ActionLink("Cancel", "Index", null, new {@class= "btn btn-default" })
+        </div>
+    }
+</div>

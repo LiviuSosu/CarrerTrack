@@ -1,0 +1,43 @@
+﻿@model IEnumerable<CarrerTrack.Web.Model.InterviewQuestion>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br/>
+<br />
+
+<p>
+    @Html.ActionLink("Add question", "Create", null, new { @class="btn btn-primary"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestionContent)
+        </th>
+        <th>
+            @Html.DisplayName("Company")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuestionContent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyName)
+        </td>
+        <td>
+            <div role="group" aria-label="..." class="btn-group">
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }, new { @class="btn btn-warning"}) 
+                @Html.ActionLink("Details", "Details", new { id=item.Id }, new { @class = "btn btn-info" }) 
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new { @class = "btn btn-danger" })
+            </div>
+        </td>
+    </tr>
+}
+
+</table>

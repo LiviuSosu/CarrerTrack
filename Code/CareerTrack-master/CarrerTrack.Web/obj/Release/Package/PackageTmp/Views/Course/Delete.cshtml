@@ -1,0 +1,102 @@
+﻿@model CarrerTrack.Web.Model.Course
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section CustomUtils {
+    <link href="@Url.Content("~/Content/CustomUtils.css")" rel="stylesheet" />
+}
+
+<br/>
+
+<h3>Are you sure you want to delete this course?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Source)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Source)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Link)
+        </dt>
+
+        @if(Model.Link!=null)
+        {
+        <dd>
+            @Html.DisplayFor(model => model.Link)
+        </dd>
+        }
+        else
+        {
+            <dd>
+                <p class="fieldInfoNotAvailable">Link not available</p>
+            </dd>
+        }
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        @if (Model.Description != null)
+        {
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        }
+        else
+        {
+            <dd>
+                <p class="fieldInfoNotAvailable">Description not available</p>
+            </dd>
+        }
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        @if (Model.Notes != null)
+        {
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+        }
+        else
+        {
+            <dd>
+                <p class="fieldInfoNotAvailable">Description not available</p>
+            </dd>
+        }
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="btn-group" role="group" aria-label="...">
+            <input type="submit" value="Delete" class="btn btn-danger" /> 
+            @Html.ActionLink("Back to list", "Index", null, new { @class= "btn btn-default" })
+        </div>
+    }
+</div>

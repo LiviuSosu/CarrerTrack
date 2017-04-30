@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarrerTrack.Domain", "Carre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarrerTrack.Data", "CarrerTrack.Data\CarrerTrack.Data.csproj", "{F5CF744E-2934-4F67-BBCD-610F06084A45}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjectUtils", "ProjectUtils", "{596F82EE-2463-457B-9FD5-B939CD6319CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerTrack.Utils", "CareerTrack.Utils\CareerTrack.Utils.csproj", "{24F44B89-E7DF-4BCE-A367-9C86F016BB15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerTrack.Logging", "CareerTrack.Logging\CareerTrack.Logging.csproj", "{E2926ACC-9B70-4C60-9D97-B8F433FF446C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,8 +39,20 @@ Global
 		{F5CF744E-2934-4F67-BBCD-610F06084A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5CF744E-2934-4F67-BBCD-610F06084A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5CF744E-2934-4F67-BBCD-610F06084A45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24F44B89-E7DF-4BCE-A367-9C86F016BB15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24F44B89-E7DF-4BCE-A367-9C86F016BB15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24F44B89-E7DF-4BCE-A367-9C86F016BB15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24F44B89-E7DF-4BCE-A367-9C86F016BB15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2926ACC-9B70-4C60-9D97-B8F433FF446C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2926ACC-9B70-4C60-9D97-B8F433FF446C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2926ACC-9B70-4C60-9D97-B8F433FF446C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2926ACC-9B70-4C60-9D97-B8F433FF446C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{24F44B89-E7DF-4BCE-A367-9C86F016BB15} = {596F82EE-2463-457B-9FD5-B939CD6319CE}
+		{E2926ACC-9B70-4C60-9D97-B8F433FF446C} = {596F82EE-2463-457B-9FD5-B939CD6319CE}
 	EndGlobalSection
 EndGlobal

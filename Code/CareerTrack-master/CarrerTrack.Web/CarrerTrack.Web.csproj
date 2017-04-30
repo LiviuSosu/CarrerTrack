@@ -221,6 +221,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Properties\PublishProfiles\LiviuS.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\AutocompleteHelper.js" />
     <Content Include="Scripts\bootstrap-rating\bootstrap-rating.js" />
     <Content Include="Scripts\bootstrap-rating\bootstrap-rating.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -305,6 +306,7 @@
     <Content Include="Views\Article\Delete.cshtml" />
     <Content Include="Views\JobAnnouncement\Edit.cshtml" />
     <Content Include="Views\JobAnnouncement\Delete.cshtml" />
+    <Content Include="Views\JobAnnouncement\CompanyNotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -32,6 +32,9 @@ namespace CarrerTrack.Data.EntityConfig
             Property(c => c.Notes)
                .IsOptional()
                .HasMaxLength(1000);
+
+            Property(c => c.BrokenLink)
+               .IsOptional();
         }
     }
 }

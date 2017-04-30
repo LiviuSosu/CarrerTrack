@@ -66,6 +66,10 @@ namespace CarrerTrack.Web.Controllers
                 if (_userReadApp.IsLoginSuccessfull(user))
                 {
                     FormsAuthentication.SetAuthCookie(user.Email, false);
+
+                 //   var user2 = _userReadApp.GetUserByEmail(user.Email);
+                 //   Session["LoggedUSer"] = user2.UserId;
+
                     return RedirectToAction("Index", "Home");
                 }
                 else

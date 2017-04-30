@@ -100,7 +100,7 @@ namespace CarrerTrack.Web.Controllers
             job.Skills = GetSkillsForDropDownControl();
             job.Location = GetLocationsForDropDownControl();
             job.Role = GetRolesForDropDownControl();
-            job.Company = GetCompaniesForDropDownControl();
+           // job.Company = GetCompaniesForDropDownControl();
 
             return View(job);
         }
@@ -116,10 +116,16 @@ namespace CarrerTrack.Web.Controllers
             if (ModelState.IsValid)
             {
                 var _jobAnnouncement = MapAddJobAnnouncementToJobAnnouncement(jobAnnouncement);
-                _jobAnnouncement.UserId = loggedUser.UserId;
-
-                _jobAnnouncementCommandApp.AddJobAnnouncement(_jobAnnouncement);
-                return RedirectToAction("Index", "JobAnnouncement");
+                if(_jobAnnouncement != null)
+                {
+                    _jobAnnouncement.UserId = loggedUser.UserId;
+                    _jobAnnouncementCommandApp.AddJobAnnouncement(_jobAnnouncement);
+                    return RedirectToAction("Index", "JobAnnouncement");
+                }
+                else
+                {
+                    return PartialView("CompanyNotFound");
+                }
             }
             else
             {
@@ -163,7 +169,8 @@ namespace CarrerTrack.Web.Controllers
 
             jobAnnouncement.Location = GetLocationsForDropDownControl();
             jobAnnouncement.Role = GetRolesForDropDownControl();
-            jobAnnouncement.Company = GetCompaniesForDropDownControl();
+            jobAnnouncement.CompanyName = _jobAnnouncement.Company.CompanyName;
+           // jobAnnouncement.Company = GetCompaniesForDropDownControl();
             return View(jobAnnouncement);
         }
 
@@ -174,8 +181,15 @@ namespace CarrerTrack.Web.Controllers
             if (ModelState.IsValid)
             {
                 var _jobAnnouncement = EditJobAnnouncementToJobAnnouncement(jobAnnouncement);
-                _jobAnnouncementCommandApp.UpdateJobAnnouncement(_jobAnnouncement);
-                return RedirectToAction("Index", "JobAnnouncement");
+                if(_jobAnnouncement!=null)
+                {
+                    _jobAnnouncementCommandApp.UpdateJobAnnouncement(_jobAnnouncement);
+                    return RedirectToAction("Index", "JobAnnouncement");
+                }
+                else
+                {
+                    return PartialView("CompanyNotFound");
+                }
             }
             else
             {
@@ -218,23 +232,23 @@ namespace CarrerTrack.Web.Controllers
             return new SelectList(role, "Id", "Name");
         }
 
-        private SelectList GetCompaniesForDropDownControl()
-        {
-            var companies = Mapper.Map<IEnumerable<Company>, IEnumerable<Model.Company>>
-                            (_readCompanyService.GetUserCompanies(loggedUser.UserId));
+        //private SelectList GetCompaniesForDropDownControl()
+        //{
+        //    var companies = Mapper.Map<IEnumerable<Company>, IEnumerable<Model.Company>>
+        //                    (_readCompanyService.GetUserCompanies(loggedUser.UserId));
 
-            companies = companies.OrderBy(filter => filter.CompanyName).ToList();
+        //    companies = companies.OrderBy(filter => filter.CompanyName).ToList();
 
-            return new SelectList(companies, "CompanyId", "CompanyName"); ;
-        }
+        //    return new SelectList(companies, "CompanyId", "CompanyName"); ;
+        //}
 
         private JobAnnouncement MapAddJobAnnouncementToJobAnnouncement(AddJobAnnouncement jobAnnoucement)
         {
             JobAnnouncement _jobAnnoucement = Mapper.Map<AddJobAnnouncement, JobAnnouncement>(jobAnnoucement);
             _jobAnnoucement.LocationId = jobAnnoucement.LocationId;
             _jobAnnoucement.RoleId = jobAnnoucement.RoleId;
-            _jobAnnoucement.CompanyId = jobAnnoucement.CompanyId;
-            foreach(var skill in jobAnnoucement.SelectedSkills)
+            _jobAnnoucement.CompanyId = _readCompanyService.GetAll().Where(c => c.CompanyName == jobAnnoucement.CompanyName).First().CompanyId;
+            foreach (var skill in jobAnnoucement.SelectedSkills)
             {
                 _jobAnnoucement.Skills.Add(_readSkillService.GetById(skill));
             }
@@ -294,8 +308,15 @@ namespace CarrerTrack.Web.Controllers
             JobAnnouncement _jobAnnoucement = Mapper.Map<EditJobAnnouncement,JobAnnouncement>(jobAnnouncement);
             _jobAnnoucement.LocationId = jobAnnouncement.LocationId;
             _jobAnnoucement.RoleId = jobAnnouncement.RoleId;
-            _jobAnnoucement.CompanyId = jobAnnouncement.CompanyId;
-
+            try
+            {
+                _jobAnnoucement.CompanyId = _readCompanyService.GetAll().Where(c => c.CompanyName == jobAnnouncement.CompanyName).Single().CompanyId;
+            }
+            catch (InvalidOperationException)
+            {
+                _jobAnnoucement = null;
+                return _jobAnnoucement;
+            }
             _jobAnnoucement.UserId = loggedUser.UserId;
             _jobAnnoucement.Skills = new List<Skill>();
             foreach (var skill in jobAnnouncement.SelectedSkill)
@@ -304,6 +325,19 @@ namespace CarrerTrack.Web.Controllers
             }
 
             return _jobAnnoucement;
+        }
+
+        public JsonResult GetCompanies(string Companies, string term = "")
+        {
+            //autocomplete http://stackoverflow.com/questions/37585676/autocomplete-dropdown-in-mvc5
+            var companies = Mapper.Map<IEnumerable<Company>, IEnumerable<Model.Company>>
+                          (_readCompanyService.GetUserCompanies(loggedUser.UserId));
+
+            var objCustomerlist = companies.Where(c => c.CompanyName.ToUpper()
+                            .Contains(term.ToUpper()))
+                            .Select(c => new { Name = c.CompanyName, ID = c.CompanyId })
+                            .Distinct().ToList();
+            return Json(objCustomerlist, JsonRequestBehavior.AllowGet);
         }
     }
 }

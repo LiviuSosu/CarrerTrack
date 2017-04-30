@@ -13,5 +13,8 @@ namespace CarrerTrack.Domain.Entities
 
         public int UserId { get; set; }
         public virtual User user { get; set; }
+
+        //added a flag to mark if a link is broken or not
+        public bool BrokenLink { get; set; }
     }
 }

@@ -29,6 +29,7 @@ namespace CarrerTrack.Web.Controllers
             _readUserService = userReadApp;
 
             loggedUser = Utils.LoggedUser.GetLoggedUser(_readUserService);
+            // var user= Session["LoggedUSer"] as User;
         }
 
         [Authorize]
@@ -42,7 +43,7 @@ namespace CarrerTrack.Web.Controllers
                 ViewBag.PrioritySortParameter = sortOrder == "Priority" ? "Priority_desc" : "Priority";
 
                 var _userTasksTasks = Mapper.Map<IEnumerable<Domain.Entities.UserTask>, IEnumerable<Model.UserTask>>
-                   (_readUserTaskService.GetUserTasks(loggedUser.UserId));
+                 (_readUserTaskService.GetUserTasks(loggedUser.UserId));
 
                 if (searchString != null)
                 {

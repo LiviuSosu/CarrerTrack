@@ -37,12 +37,17 @@ namespace CarrerTrack.Web.ViewModel.JobAnnouncement
         public int RoleId { get; set; }
         public IEnumerable<SelectListItem> Role { get; set; }
 
-        [Required(ErrorMessage = "*")]
-        [Display(Name = "Company")]
-        public int CompanyId { get; set; }
-        public IEnumerable<SelectListItem> Company { get; set; }
+        //[Required(ErrorMessage = "*")]
+        //[Display(Name = "Company")]
+        //public int CompanyId { get; set; }
+        //public IEnumerable<SelectListItem> Company { get; set; }
 
         public int UserId { get; set; }
         public virtual User user { get; set; }
+
+        [Required(ErrorMessage = "*")]
+        [Display(Name = "Company")]
+        public string CompanyName { get; set; }
+        public int CompanyId { get; set; }
     }
 }

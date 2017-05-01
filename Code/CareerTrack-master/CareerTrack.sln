@@ -17,6 +17,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerTrack.Utils", "Career
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerTrack.Logging", "CareerTrack.Logging\CareerTrack.Logging.csproj", "{E2926ACC-9B70-4C60-9D97-B8F433FF446C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DEB49546-4D4E-40DE-B818-BB2782D6D233}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilsUnitTestProject", "UtilsUnitTestProject\UtilsUnitTestProject.csproj", "{B0EFB04C-FCC6-4D4B-B147-D4CD755A3895}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OtherSolutionItems", "OtherSolutionItems", "{56AE559A-CECA-4CF3-855D-4F2C055B2674}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatabaseScripts", "DatabaseScripts", "{404D950E-A16E-48D5-90F8-912A62A8DBB3}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\..\..\Desktop\removing the duplicates.sql = ..\..\..\..\..\..\..\Desktop\removing the duplicates.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +58,10 @@ Global
 		{E2926ACC-9B70-4C60-9D97-B8F433FF446C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2926ACC-9B70-4C60-9D97-B8F433FF446C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2926ACC-9B70-4C60-9D97-B8F433FF446C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0EFB04C-FCC6-4D4B-B147-D4CD755A3895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0EFB04C-FCC6-4D4B-B147-D4CD755A3895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0EFB04C-FCC6-4D4B-B147-D4CD755A3895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0EFB04C-FCC6-4D4B-B147-D4CD755A3895}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,5 +69,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{24F44B89-E7DF-4BCE-A367-9C86F016BB15} = {596F82EE-2463-457B-9FD5-B939CD6319CE}
 		{E2926ACC-9B70-4C60-9D97-B8F433FF446C} = {596F82EE-2463-457B-9FD5-B939CD6319CE}
+		{B0EFB04C-FCC6-4D4B-B147-D4CD755A3895} = {DEB49546-4D4E-40DE-B818-BB2782D6D233}
+		{404D950E-A16E-48D5-90F8-912A62A8DBB3} = {56AE559A-CECA-4CF3-855D-4F2C055B2674}
 	EndGlobalSection
 EndGlobal

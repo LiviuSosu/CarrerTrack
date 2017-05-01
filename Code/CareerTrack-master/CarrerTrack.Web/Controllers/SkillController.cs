@@ -2,10 +2,7 @@
 using CarrerTrack.Application.Command.Interface;
 using CarrerTrack.Application.Read.Interface;
 using CarrerTrack.Domain.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace CarrerTrack.Web.Controllers
@@ -15,10 +12,16 @@ namespace CarrerTrack.Web.Controllers
         private readonly IAppCommandSkillService _skillCommandApp;
         private readonly IAppReadSkillService _skillReadApp;
 
+       // private ILogging logger;
+        //private ISimlarStrings similarStrings;
+
         public SkillController(IAppCommandSkillService skillCommandApp, IAppReadSkillService skillReadApp)
         {
             _skillReadApp = skillReadApp;
             _skillCommandApp = skillCommandApp;
+
+          //  logger = new Logging();
+         //   similarStrings = new SimilarStrings();
         }
 
         // GET: Skill

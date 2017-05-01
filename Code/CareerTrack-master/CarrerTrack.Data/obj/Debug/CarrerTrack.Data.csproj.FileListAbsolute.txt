@@ -51,8 +51,8 @@ C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\Ca
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.RenameKey3.resources
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.CurrentMigration.resources
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.JobAddsLargerColumns.resources
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.AddedBrokenLinkFlagForArticle.resources
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.BrkineLinkIsNowOptional.resources
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.csproj.GenerateResource.Cache
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.pdb
-C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.AddedBrokenLinkFlagForArticle.resources
-C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.BrkineLinkIsNowOptional.resources

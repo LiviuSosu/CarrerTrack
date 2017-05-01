@@ -124,6 +124,7 @@ C:\Users\liviu.sosu\Work\Projects\Career Track\Code\CareerTrack-master\CarrerTra
 C:\Users\liviu.sosu\Work\Projects\Career Track\Code\CareerTrack-master\CarrerTrack.Web\obj\Debug\CarrerTrack.Web.csprojResolveAssemblyReference.cache
 C:\Users\liviu.sosu\Work\Projects\Career Track\Code\CareerTrack-master\CarrerTrack.Web\obj\Debug\CarrerTrack.Web.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Code\CareerTrack-master\CarrerTrack.Web\obj\Debug\CarrerTrack.Web.pdb
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\obj\Debug\CarrerTrack.Web.csprojResolveAssemblyReference.cache
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\AutoMapper.Net4.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\roslyn\csc.exe
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -145,6 +146,8 @@ C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\Ca
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\CarrerTrack.Application.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\CarrerTrack.Data.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\CarrerTrack.Domain.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\EntityFramework.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\EntityFramework.SqlServer.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\Newtonsoft.Json.dll
@@ -162,12 +165,13 @@ C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\Ca
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\System.Web.WebPages.Razor.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\WebActivatorEx.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\WebGrease.dll
-C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\EntityFramework.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\SimpleCrypto.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\CarrerTrack.Application.pdb
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\CarrerTrack.Data.pdb
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\CarrerTrack.Domain.pdb
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\AutoMapper.xml
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\EntityFramework.xml
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\EntityFramework.SqlServer.xml
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\Ninject.xml
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\Ninject.Web.Common.xml
@@ -183,9 +187,5 @@ C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\Ca
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\System.Web.WebPages.Razor.xml
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\Antlr3.Runtime.pdb
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\Newtonsoft.Json.xml
-C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\EntityFramework.xml
-C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\obj\Debug\CarrerTrack.Web.csprojResolveAssemblyReference.cache
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\obj\Debug\CarrerTrack.Web.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\obj\Debug\CarrerTrack.Web.pdb
-C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\EntityFramework.SqlServer.dll
-C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\EntityFramework.SqlServer.xml

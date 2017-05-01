@@ -30,5 +30,7 @@ namespace CarrerTrack.Web.Model
         public string Notes { get; set; }
 
         public int UserId { get; set; }
+
+        public bool BrokenLink { get; set; }
     }
 }

@@ -14,6 +14,19 @@
     @Html.ActionLink("Add job announcement", "Create", null, new { @class = "btn btn-primary" })
 </p>
 
+@*@using (Html.BeginForm("Index", "JobAnnouncement", FormMethod.Get))
+{
+    <p>
+        Find by title: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" class="btn btn-default" />
+        <select id="readFilter" name="readFilter" class="btn btn-default dropdown-toggle">
+            <option value="0">All</option>
+            <option value="1">Read</option>
+            <option value="2">Not Read</option>
+        </select>
+    </p>
+}*@
+
 <table class="table">
     <tr>
         <th>

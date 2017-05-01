@@ -17,3 +17,5 @@ C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\Ca
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Release\CarrerTrack.Data.csproj.GenerateResource.Cache
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Release\CarrerTrack.Data.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Release\CarrerTrack.Data.pdb
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Release\CarrerTrack.Data.Migrations.AddedBrokenLinkFlagForArticle.resources
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Release\CarrerTrack.Data.Migrations.BrkineLinkIsNowOptional.resources

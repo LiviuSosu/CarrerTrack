@@ -8,6 +8,8 @@ using CarrerTrack.Data.Context;
 using CareerTrack.Utils.Functionalities.BrokenLink;
 using CareerTrack.Logging;
 using System.Timers;
+using CareerTrack.Utils.Functionalities.SimilarStrings;
+using CareerTrack.Utils.Functionalities.MockCompaniesNames;
 
 namespace CareerTrack.Utils
 {
@@ -15,15 +17,20 @@ namespace CareerTrack.Utils
     {
         static void Main(string[] args)
         {
-            CareerTrackContext db = new CareerTrackContext();
+            CompanyNameMocker companyMoker = new CompanyNameMocker();
+            //List<string> companyNames = new List<string>();
+            //companyNames = companyMoker.GetCompanyNames();
+            //companyMoker.WriteCompaniesNamesToFile(companyNames);
 
-            IBrokenLink brokenLink = new BrokenLink();
+            companyMoker.RenameCompanies();
 
-            Task.Factory.StartNew(() =>
-            {
-                System.Threading.Thread.Sleep(60 * 60 * 1000 * 24);
-                brokenLink.SetBrokenLinks(db.Articles);
-            });
+            //Task.Factory.StartNew(() =>
+            //{
+            //    CareerTrackContext db = new CareerTrackContext();
+            //    IBrokenLink brokenLink = new BrokenLink();
+            //    System.Threading.Thread.Sleep(60 * 60 * 1000 * 24);
+            //    brokenLink.SetBrokenLinks(db.Articles);
+            //});
         }
     }
 }

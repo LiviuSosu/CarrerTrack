@@ -46,7 +46,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="LoggingFiles\Articles\Articles.txt" />
     <Content Include="LoggingFiles\BrokenLinks\BrokenLinks.txt" />
+    <Content Include="LoggingFiles\Companies\Companies.txt" />
+    <Content Include="LoggingFiles\Skills\Skills.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

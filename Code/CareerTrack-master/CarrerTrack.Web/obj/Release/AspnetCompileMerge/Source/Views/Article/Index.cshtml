@@ -21,6 +21,11 @@
     <p>
         Find by title: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
         <input type="submit" value="Search" class="btn btn-default"/>
+        <select id="readFilter" name="readFilter" class="btn btn-default dropdown-toggle">
+            <option value="0">All</option>
+            <option value="1">Read</option>
+            <option value="2">Not Read</option>
+        </select>
     </p>
 }
 <table class="table">
@@ -46,6 +51,10 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IsRead)
+                @if (item.BrokenLink==true)
+                {
+                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Source)

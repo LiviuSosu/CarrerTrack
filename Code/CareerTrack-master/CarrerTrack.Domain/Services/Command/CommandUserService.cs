@@ -3,11 +3,6 @@ using CarrerTrack.Domain.Exceptions;
 using CarrerTrack.Domain.Interfaces.Command;
 using CarrerTrack.Domain.Interfaces.Command.Services;
 using SimpleCrypto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarrerTrack.Domain.Services
 {
@@ -38,5 +33,18 @@ namespace CarrerTrack.Domain.Services
                 _commandRepository.Add(user);
             }
         }     
+
+        public void ForgotPassword(string userEmail)
+        {
+        }
+
+        public void ChangePassword(string userEmail, string currentPassword, string newPassword)
+        {
+        }
+
+        public void DeactivateAccount(string userEmail)
+        {
+
+        }
     }
 }

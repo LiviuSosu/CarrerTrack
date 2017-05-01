@@ -3,11 +3,9 @@ using CarrerTrack.Application.Command.Interface;
 using CarrerTrack.Application.Read.Interface;
 using CarrerTrack.Domain.Entities;
 using CarrerTrack.Web.Utils;
-using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace CarrerTrack.Web.Controllers
@@ -20,6 +18,8 @@ namespace CarrerTrack.Web.Controllers
         private readonly IAppReadUserService _readUserService;
 
         private readonly User loggedUser;
+        //private ILogging logger;
+        //private ISimlarStrings similarStrings;
 
         public CompanyController(IAppCommandCompanyService companyCommandApp, IAppReadCompanyService companyArtilceApp,
             IAppReadReviewService reviewReadApp, IAppReadUserService readUserService)
@@ -29,21 +29,14 @@ namespace CarrerTrack.Web.Controllers
             _reviewReadApp = reviewReadApp;
             _readUserService = readUserService;
 
-            loggedUser = Utils.LoggedUser.GetLoggedUser(_readUserService);
+            loggedUser = LoggedUser.GetLoggedUser(_readUserService);
+            //logger = new Logging();
+            //similarStrings = new SimilarStrings();
         }
 
         [Authorize]
         public ActionResult Index(string sortOrder, string currentFilter, string searchString)
         {
-            if (_reviewReadApp.GetAll().Count()>0)
-            {
-                ViewBag.CompanyHasReviews = true;
-            }
-            else
-            {
-                ViewBag.CompanyHasReviews = false;
-            }
-
             ViewBag.CurrentSort = sortOrder;
             ViewBag.NameSortParameter = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.SizeSortParameter = sortOrder == "Size" ? "SizeDesc" : "Size";
@@ -126,6 +119,10 @@ namespace CarrerTrack.Web.Controllers
                 var _company = Mapper.Map<Model.Company,Company>(company);
                 _company.UserId = loggedUser.UserId;
                 _companyCommandApp.Update(_company);
+
+                //if (logger.)
+                //{
+                //}
 
                 return RedirectToAction("Index","Company");
             }

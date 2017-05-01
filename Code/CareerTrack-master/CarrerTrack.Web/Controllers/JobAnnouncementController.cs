@@ -1,12 +1,11 @@
 ﻿using AutoMapper;
+//using CareerTrack.Logging;
 using CarrerTrack.Application.Command.Interface;
 using CarrerTrack.Application.Read.Interface;
 using CarrerTrack.Domain.Entities;
-using CarrerTrack.Web.Utils;
 using CarrerTrack.Web.ViewModel.JobAnnouncement;
 using PagedList;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,6 +25,7 @@ namespace CarrerTrack.Web.Controllers
         private readonly IAppReadLocationService _readLocationService;
 
         private readonly User loggedUser;
+        //ILogging log;
 
         public JobAnnouncementController(IAppCommandJobAnnouncementService jobAnnouncementCommandApp, IAppReadLocationService readLocationService,
             IAppReadJobAnnouncementService jobAnnouncementReadApp, IAppReadUserService readUserService, IAppReadSkillService readSkillService, 
@@ -40,6 +40,7 @@ namespace CarrerTrack.Web.Controllers
             _readCompanyService = readCompanyService;
 
             loggedUser = Utils.LoggedUser.GetLoggedUser(_readUserService);
+            //log = new Logging();
         }
 
         // GET: JobAnnouncement
@@ -124,6 +125,7 @@ namespace CarrerTrack.Web.Controllers
                 }
                 else
                 {
+                    //log.LogCompanyExceptionOnJobAdd(jobAnnouncement.CompanyId, jobAnnouncement.CompanyName,jobAnnouncement.UserId);
                     return PartialView("CompanyNotFound");
                 }
             }
@@ -188,6 +190,7 @@ namespace CarrerTrack.Web.Controllers
                 }
                 else
                 {
+                    //log.LogCompanyExceptionOnJobAdd(jobAnnouncement.CompanyId, jobAnnouncement.CompanyName, jobAnnouncement.UserId);
                     return PartialView("CompanyNotFound");
                 }
             }

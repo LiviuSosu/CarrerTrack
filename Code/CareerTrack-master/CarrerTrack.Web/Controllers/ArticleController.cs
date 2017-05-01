@@ -1,16 +1,15 @@
 ﻿using AutoMapper;
+//using CareerTrack.Logging;
+//using CareerTrack.Utils.Functionalities.SimilarStrings;
 using CarrerTrack.Application.Command.Interface;
 using CarrerTrack.Application.Read.Interface;
 using CarrerTrack.Domain.Entities;
-using CarrerTrack.Web.Model;
-using CarrerTrack.Web.Utils;
 using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Security;
 
 namespace CarrerTrack.Web.Controllers
 {
@@ -21,6 +20,8 @@ namespace CarrerTrack.Web.Controllers
         private readonly IAppReadUserService _readUserService;
 
         private readonly User loggedUser;
+       // private ILogging logger;
+       // private ISimlarStrings similarStrings;
 
         public ArticleController(IAppCommandArticleService articleCommandApp, IAppReadArticleService readArtilceApp,
             IAppReadUserService readUserService)
@@ -30,10 +31,12 @@ namespace CarrerTrack.Web.Controllers
             _readUserService = readUserService;
 
             loggedUser = Utils.LoggedUser.GetLoggedUser(_readUserService);
+           // logger = new Logging();
+           // similarStrings = new SimilarStrings();
         }
 
         [Authorize]
-        public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page=1)
+        public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? readFilter, int? page=1)
         {
             ViewBag.CurrentSort = sortOrder;
             ViewBag.TitleSortParameter = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
@@ -41,6 +44,15 @@ namespace CarrerTrack.Web.Controllers
 
             var _articles = Mapper.Map<IEnumerable<Domain.Entities.Article>, IEnumerable<Model.Article>>
                 (_articleReadApp.GetUserArticles(loggedUser.UserId));
+
+            if (readFilter == 1)
+            {
+                _articles = _articles.Where(a => a.IsRead == true);
+            }
+            if (readFilter == 2)
+            {
+                _articles = _articles.Where(a => a.IsRead == false);
+            }
 
             ViewBag.allArticles = _articles.Count();
 

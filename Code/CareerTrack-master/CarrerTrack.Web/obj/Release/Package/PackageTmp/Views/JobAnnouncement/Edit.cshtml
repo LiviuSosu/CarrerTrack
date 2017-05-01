@@ -59,17 +59,25 @@
             </div>
         </div>
 
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.LabelFor(model => model.Company, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.CompanyId, Model.Company, new { @class = "btn btn-default dropdown-toggle" })
+            </div>
+        </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CompanyName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => Model.CompanyName, new { @class = "form-control", @Value=Model.CompanyName })
+                @Html.HiddenFor(model => Model.CompanyId)
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.SelectedSkill, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.ListBoxFor(model => model.SelectedSkill, Model.Skills, new { @size = 3, @class = "btn btn-default dropdown-toggle" })
+                @Html.ListBoxFor(model => model.SelectedSkill, Model.Skills, new { @size = 15, @class = "btn btn-default dropdown-toggle" })
                 @Html.ValidationMessageFor(model => model.SelectedSkill, "", new { @class = "text-danger" })
             </div>
         </div>

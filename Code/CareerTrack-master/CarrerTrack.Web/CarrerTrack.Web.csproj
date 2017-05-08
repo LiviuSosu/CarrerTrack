@@ -196,12 +196,16 @@
     <Compile Include="Utils\SelectedCompany.cs" />
     <Compile Include="ViewModel\DocumentViewModel.cs" />
     <Compile Include="ViewModel\JobAnnouncement\DetailsJobAnnouncement.cs" />
-    <Compile Include="ViewModel\JobAnnouncement\EditJobAnnouncement.cs" />
+    <Compile Include="ViewModel\JobAnnouncement\EditJobAnnouncementViewModel.cs" />
     <Compile Include="ViewModel\UserLoginViewModel.cs" />
     <Compile Include="ViewModel\UserRegistrationViewModel.cs" />
-    <Compile Include="ViewModel\JobAnnouncement\AddJobAnnouncement.cs" />
+    <Compile Include="ViewModel\JobAnnouncement\AddJobAnnouncementViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Chosen\chosen-sprite.png" />
+    <Content Include="Chosen\chosen.css" />
+    <Content Include="Chosen\chosen.jquery.js" />
+    <Content Include="Chosen\chosen.jquery.min.js" />
     <Content Include="Content\bootstrap-rating.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -219,6 +223,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Chosen\LICENSE.md" />
+    <Content Include="Chosen\README.md" />
+    <Content Include="Chosen\VERSION" />
     <None Include="Properties\PublishProfiles\LiviuS.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\AutocompleteHelper.js" />
@@ -226,15 +233,27 @@
     <Content Include="Scripts\bootstrap-rating\bootstrap-rating.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\chooseArtist.js" />
+    <Content Include="Scripts\chooseGenre.js" />
     <Content Include="Scripts\JavaScriptHelpers.js" />
+    <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\jquery-1.7.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.16.js" />
+    <Content Include="Scripts\jquery-ui-1.8.16.min.js" />
     <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-1.7.js" />
+    <Content Include="Scripts\modernizr-1.7.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\respond.js" />

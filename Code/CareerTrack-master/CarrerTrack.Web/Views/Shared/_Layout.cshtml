@@ -52,8 +52,8 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
         <footer>
+            <hr />
             <p>&copy; @DateTime.Now.Year - Career Track</p>
         </footer>
     </div>
@@ -63,3 +63,10 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+<script>
+    $('footer').each(function (i, v) {
+  if(i > 0){
+    $(v).hide();
+  }
+});
+</script>

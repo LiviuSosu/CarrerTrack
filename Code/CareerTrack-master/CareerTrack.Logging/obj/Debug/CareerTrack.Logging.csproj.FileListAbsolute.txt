@@ -1,0 +1,5 @@
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CareerTrack.Logging\bin\Debug\CareerTrack.Logging.dll.config
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CareerTrack.Logging\bin\Debug\CareerTrack.Logging.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CareerTrack.Logging\bin\Debug\CareerTrack.Logging.pdb
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CareerTrack.Logging\obj\Debug\CareerTrack.Logging.dll
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CareerTrack.Logging\obj\Debug\CareerTrack.Logging.pdb

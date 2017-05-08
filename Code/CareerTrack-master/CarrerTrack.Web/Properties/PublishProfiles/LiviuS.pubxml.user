@@ -132,6 +132,27 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/WebGrease.dll">
       <publishTime>02/12/2017 09:59:52</publishTime>
     </File>
+    <File Include="Chosen/chosen-sprite.png">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
+    <File Include="Chosen/chosen.css">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
+    <File Include="Chosen/chosen.jquery.js">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
+    <File Include="Chosen/chosen.jquery.min.js">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
+    <File Include="Chosen/LICENSE.md">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
+    <File Include="Chosen/README.md">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
+    <File Include="Chosen/VERSION">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
     <File Include="Content/bootstrap-rating.css">
       <publishTime>03/06/2017 20:49:50</publishTime>
     </File>
@@ -204,8 +225,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/bootstrap.min.js">
       <publishTime>03/06/2017 20:49:47</publishTime>
     </File>
+    <File Include="Scripts/chooseArtist.js">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
+    <File Include="Scripts/chooseGenre.js">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
     <File Include="Scripts/JavaScriptHelpers.js">
       <publishTime>03/05/2017 15:08:20</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2-vsdoc.js">
+      <publishTime>05/02/2017 21:02:10</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>02/12/2017 09:59:52</publishTime>
@@ -216,8 +246,29 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/jquery-1.10.2.min.map">
       <publishTime>02/12/2017 09:59:52</publishTime>
     </File>
+    <File Include="Scripts/jquery-1.7.1-vsdoc.js">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.7.1.js">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.7.1.min.js">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.16.js">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.16.min.js">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
     <File Include="Scripts/jquery-ui.js">
       <publishTime>02/12/2017 09:59:52</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>06/06/2014 04:01:18</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
       <publishTime>02/12/2017 09:59:52</publishTime>
@@ -230,6 +281,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.min.js">
       <publishTime>02/12/2017 09:59:52</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-1.7.js">
+      <publishTime>06/06/2014 04:01:18</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-1.7.min.js">
+      <publishTime>06/06/2014 04:01:18</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.6.2.js">
       <publishTime>02/12/2017 09:59:52</publishTime>

@@ -30,8 +30,8 @@ namespace CarrerTrack.Web.AutoMapper
             Mapper.CreateMap<Model.Skill, Skill>();
             Mapper.CreateMap<Model.InterviewQuestion, InterviewQuestion>();
 
-            Mapper.CreateMap<AddJobAnnouncement, JobAnnouncement>();
-            Mapper.CreateMap<EditJobAnnouncement, JobAnnouncement>();
+            Mapper.CreateMap<AddJobAnnouncementViewModel, JobAnnouncement>();
+            Mapper.CreateMap<EditJobAnnouncementViewModel, JobAnnouncement>();
         }
     }
 }

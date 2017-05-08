@@ -1,0 +1,79 @@
+﻿@model PagedList.IPagedList<CarrerTrack.Web.Model.Article>
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<link href="~/Content/bootstrap-rating.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-rating/bootstrap-rating.min.js"></script>
+@Html.BootstrapRating(5);*@
+
+<h2>My articles ( @ViewBag.allArticles )</h2>
+
+<p>
+    @Html.ActionLink("Add article", "Create", new  { page = ViewBag.CurrentPage }, new { @class= "btn btn-primary" })
+</p>
+
+@using (Html.BeginForm("Index", "Article", FormMethod.Get))
+{
+    <p>
+        Find by title: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" class="btn btn-default"/>
+        <select id="readFilter" name="readFilter" class="btn btn-default dropdown-toggle">
+            <option value="0">All</option>
+            <option value="1">Read</option>
+            <option value="2">Not Read</option>
+        </select>
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Title", "Index",  new { sortOrder = ViewBag.TitleSortParameter, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Is read", "Index", new { sortOrder = ViewBag.IsReadParameter, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            Source
+        </th>
+        <th></th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsRead)
+                @if (item.BrokenLink==true)
+                {
+                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Source)
+            </td>
+
+            <td>
+                <div class="btn-group" role="group" aria-label="...">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ArticleId, page = ViewBag.CurrentPage }, new { @class = "btn btn-warning" }) 
+                    @Html.ActionLink("Details", "Details", new { id = item.ArticleId, page = ViewBag.CurrentPage }, new { @class = "btn btn-info" }) 
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ArticleId, page = ViewBag.CurrentPage }, new { @class = "btn btn-danger" })
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

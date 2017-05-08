@@ -1,0 +1,88 @@
+﻿@model CarrerTrack.Web.ViewModel.JobAnnouncement.AddJobAnnouncement
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Add a job announcement</h2>
+
+@using (Html.BeginForm("Create", "JobAnnouncement", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Content, 10, 50, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Rewards, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Rewards, 10, 50, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Rewards, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Source, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Source, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Source, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Contact, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Contact, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Contact, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Location, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.LocationId, Model.Location, new { @class = "btn btn-default dropdown-toggle" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.SelectedSkills, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.ListBoxFor(model => model.SelectedSkills, Model.Skills, new { @size = 15, @class = "btn btn-default dropdown-toggle" })
+                @Html.ValidationMessageFor(model => model.SelectedSkills, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Role, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.RoleId, Model.Role, new { @class = "btn btn-default dropdown-toggle" })
+            </div>
+        </div>
+        @*aici modific*@
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.Company, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.CompanyId, Model.Company, new { @class = "btn btn-default dropdown-toggle" })
+            </div>
+        </div>*@
+        <div class="form-group">
+            @Html.LabelFor(model => model.CompanyName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => Model.CompanyName, new { @class = "form-control" })
+                @Html.HiddenFor(model => Model.CompanyId)
+            </div>
+        </div>
+    </div>
+    @*aici modific*@
+    <div role="group" class="btn-group" aria-label="...">
+        <input type="submit" value="Create" class="btn btn-primary" />
+        @Html.ActionLink("Add skill", "Create", "Skill", null, new { @class = "btn btn-info" })
+        @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-default" })
+
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

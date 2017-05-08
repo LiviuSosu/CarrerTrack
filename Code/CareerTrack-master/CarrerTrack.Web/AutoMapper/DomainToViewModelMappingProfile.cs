@@ -32,7 +32,7 @@ namespace CarrerTrack.Web.AutoMapper
 
             Mapper.CreateMap<JobAnnouncement, Model.JobAnnouncement>();
 
-            Mapper.CreateMap<JobAnnouncement, AddJobAnnouncement>();
+            Mapper.CreateMap<JobAnnouncement, AddJobAnnouncementViewModel>();
         }
     }
 }

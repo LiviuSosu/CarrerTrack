@@ -1,4 +1,4 @@
-﻿@model CarrerTrack.Web.ViewModel.JobAnnouncement.AddJobAnnouncement
+﻿@model CarrerTrack.Web.ViewModel.JobAnnouncement.AddJobAnnouncementViewModel
 @{
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -12,6 +12,7 @@
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
         <div class="form-group">
             @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -19,6 +20,7 @@
                 @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
             </div>
         </div>
+
         <div class="form-group">
             @Html.LabelFor(model => model.Rewards, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -26,6 +28,7 @@
                 @Html.ValidationMessageFor(model => model.Rewards, "", new { @class = "text-danger" })
             </div>
         </div>
+
         <div class="form-group">
             @Html.LabelFor(model => model.Source, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -33,6 +36,7 @@
                 @Html.ValidationMessageFor(model => model.Source, "", new { @class = "text-danger" })
             </div>
         </div>
+
         <div class="form-group">
             @Html.LabelFor(model => model.Contact, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -40,32 +44,30 @@
                 @Html.ValidationMessageFor(model => model.Contact, "", new { @class = "text-danger" })
             </div>
         </div>
+
+        <div class="form-group">
+            @Html.Label("Required Skills", new { @class = "control-label col-md-2" }) 
+            <div class="editor-field col-md-10">
+                @Html.ListBox("JobAnnouncementRequiredSkills", ViewBag.JobAnnouncementRequiredSkills as MultiSelectList,
+                   new { @class = "chzn-select", data_placeholder = "Please choose skills...", style = "width:350px;" })
+            </div>
+        </div>
+
         <div class="form-group">
             @Html.LabelFor(model => model.Location, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.LocationId, Model.Location, new { @class = "btn btn-default dropdown-toggle" })
+                @Html.DropDownList("Location", ViewBag.Locations as SelectList, new { @class = "btn btn-default dropdown-toggle", @style = "width:350px" })
             </div>
         </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.SelectedSkills, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.ListBoxFor(model => model.SelectedSkills, Model.Skills, new { @size = 15, @class = "btn btn-default dropdown-toggle" })
-                @Html.ValidationMessageFor(model => model.SelectedSkills, "", new { @class = "text-danger" })
-            </div>
-        </div>
+
+
         <div class="form-group">
             @Html.LabelFor(model => model.Role, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.RoleId, Model.Role, new { @class = "btn btn-default dropdown-toggle" })
+                @Html.DropDownList("Role", ViewBag.Roles as SelectList, new { @class = "btn btn-default dropdown-toggle" })
             </div>
         </div>
-        @*aici modific*@
-        @*<div class="form-group">
-            @Html.LabelFor(model => model.Company, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownListFor(model => model.CompanyId, Model.Company, new { @class = "btn btn-default dropdown-toggle" })
-            </div>
-        </div>*@
+
         <div class="form-group">
             @Html.LabelFor(model => model.CompanyName, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -73,8 +75,9 @@
                 @Html.HiddenFor(model => Model.CompanyId)
             </div>
         </div>
-    </div>
-    @*aici modific*@
+
+        </div>
+
     <div role="group" class="btn-group" aria-label="...">
         <input type="submit" value="Create" class="btn btn-primary" />
         @Html.ActionLink("Add skill", "Create", "Skill", null, new { @class = "btn btn-info" })
@@ -86,3 +89,8 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+<script src="@Url.Content("~/Scripts/jquery-1.7.1.js")"></script>
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/chosen/chosen.jquery.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/chosen/chosen.css")" rel="stylesheet" type="text/css" />
+<script>    $(".chzn-select").chosen(); </script>

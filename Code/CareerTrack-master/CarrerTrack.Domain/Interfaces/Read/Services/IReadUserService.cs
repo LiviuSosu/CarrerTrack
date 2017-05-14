@@ -10,6 +10,7 @@ namespace CarrerTrack.Domain.Interfaces.Read.Services
     public interface IReadUserService : IReadServiceBase<User>
     {
         bool IsLoginSuccessfull(User user);
+        bool IsLoginSuccessfullForAccountActivation(User user);
         User GetUserByEmail(string email);
     }
 }

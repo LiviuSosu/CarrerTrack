@@ -26,7 +26,7 @@ namespace CarrerTrack.Domain.Services.Read
             if (_user != null)
             {
                 var crypto = new SimpleCrypto.PBKDF2();
-                if (_user.Password == crypto.Compute(user.Password, _user.PasswordSalt))
+                if ((_user.Password == crypto.Compute(user.Password, _user.PasswordSalt)) && _user.IsActive == true)
                 {
                     isValid = true;
                 }
@@ -38,6 +38,22 @@ namespace CarrerTrack.Domain.Services.Read
         public User GetUserByEmail(string email)
         {
             return _readRepository.GetUserByEmail(email);
+        }
+
+        public bool IsLoginSuccessfullForAccountActivation(User user)
+        {
+            bool isValid = false;
+            var _user = _readRepository.GetUserByEmail(user.Email);
+            if (_user != null)
+            {
+                var crypto = new SimpleCrypto.PBKDF2();
+                if (crypto.Compute(_user.Password,_user.PasswordSalt) == crypto.Compute(user.Password, _user.PasswordSalt))
+                {
+                    isValid = true;
+                }
+            }
+
+            return isValid;
         }
     }
 }

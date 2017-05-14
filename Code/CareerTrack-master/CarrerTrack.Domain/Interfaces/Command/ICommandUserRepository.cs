@@ -10,6 +10,6 @@ namespace CarrerTrack.Domain.Interfaces.Command
 {
     public interface ICommandUserRepository : ICommandRepositoryBase<User>
     {
-        //void RegisterUser(User user);
+        void RegisterUser(User user);
     }
 }

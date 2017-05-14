@@ -19,7 +19,7 @@ namespace CarrerTrack.Web.Controllers
         private readonly IAppReadUserTaskService _readUserTaskService;
         private readonly IAppCommandUserTaskService _commandUserTaskService;
 
-        private readonly User loggedUser;
+        private readonly Domain.Entities.User loggedUser;
 
         public UserTaskController(IAppReadUserTaskService userTaskReadApp, IAppCommandUserTaskService userTaskCommandApp,
             IAppReadUserService userReadApp)

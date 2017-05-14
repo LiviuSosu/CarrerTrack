@@ -190,8 +190,10 @@
     <Compile Include="Model\Review.cs" />
     <Compile Include="Model\Role.cs" />
     <Compile Include="Model\Skill.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\HttpParamActionAttribute.cs" />
     <Compile Include="Utils\LoggedUser.cs" />
     <Compile Include="Utils\SelectedCompany.cs" />
     <Compile Include="ViewModel\DocumentViewModel.cs" />
@@ -233,8 +235,6 @@
     <Content Include="Scripts\bootstrap-rating\bootstrap-rating.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\chooseArtist.js" />
-    <Content Include="Scripts\chooseGenre.js" />
     <Content Include="Scripts\JavaScriptHelpers.js" />
     <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -243,6 +243,30 @@
     <None Include="Scripts\jquery-1.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4\external\jquery\jquery.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.11.4\index.html" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.structure.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.structure.min.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.11.4\jquery-ui.theme.min.css" />
     <Content Include="Scripts\jquery-ui-1.8.16.js" />
     <Content Include="Scripts\jquery-ui-1.8.16.min.js" />
     <Content Include="Scripts\jquery-ui.js" />
@@ -258,6 +282,8 @@
     <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\ui\jquery.ui.combobox.css" />
+    <Content Include="Scripts\ui\jquery.ui.combobox.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -326,6 +352,10 @@
     <Content Include="Views\JobAnnouncement\Edit.cshtml" />
     <Content Include="Views\JobAnnouncement\Delete.cshtml" />
     <Content Include="Views\JobAnnouncement\CompanyNotFound.cshtml" />
+    <Content Include="Views\User\Account.cshtml" />
+    <Content Include="Views\User\ActivateAccount.cshtml" />
+    <Content Include="Views\User\ForgotPassword.cshtml" />
+    <Content Include="Views\User\MailSent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

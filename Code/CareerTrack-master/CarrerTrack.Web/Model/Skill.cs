@@ -9,10 +9,10 @@ namespace CarrerTrack.Web.Model
     public class Skill
     {
         [Key]
-        public int Id { get; set; }
+        public int ID { get; set; }
 
-        [Display(Name="Skill")]
-        [Required(ErrorMessage ="Skill name is required")]
+        [Display(Name = "Skill")]
+        [Required(ErrorMessage = "Skill name is required")]
         [MaxLength(30, ErrorMessage = "Skill name can have up to 30 characters")]
         public string Name { get; set; }
     }

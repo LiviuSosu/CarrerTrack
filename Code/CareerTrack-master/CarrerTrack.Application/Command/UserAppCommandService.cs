@@ -23,5 +23,25 @@ namespace CarrerTrack.Application.Command
         {
             _commandUserService.RegisterUser(user, confirmPassword);
         }
+
+        public void ChangePassword(User user, string oldPassword, string newPassword, string confirmPassword)
+        {
+            _commandUserService.ChangePassword(user, oldPassword, newPassword, confirmPassword);
+        }
+
+        public void DeactivateAccount(User user)
+        {
+            _commandUserService.DeactivateAccount(user);
+        }
+
+        public void ForgotPassword(User user)
+        {
+            _commandUserService.ForgotPassword(user);
+        }
+
+        public void ActivateAccount(User user)
+        {
+            _commandUserService.ActivateAccount(user);
+        }
     }
 }

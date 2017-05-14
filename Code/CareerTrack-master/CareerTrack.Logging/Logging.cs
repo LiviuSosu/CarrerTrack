@@ -61,5 +61,16 @@ namespace CareerTrack.Logging
                 sw.Close();
             }
         }
+
+        public void LogDeactivatedUsersAttemptsToChangePassword(int userId)
+        {
+            string usersLogFilePath = path + @"Users\Users.txt";
+
+            using (StreamWriter sw = File.AppendText(usersLogFilePath))
+            {
+                sw.WriteLine("The user having the id: " + userId + " attempted to change the passwor on " + DateTime.Today.ToShortDateString());
+                sw.Close();
+            }
+        }
     }
 }

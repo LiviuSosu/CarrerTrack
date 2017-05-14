@@ -10,6 +10,7 @@ namespace CarrerTrack.Application.Read.Interface
     public interface IAppReadUserService : IAppReadServiceBase<User>
     {
         bool IsLoginSuccessfull(User user);
+        bool IsLoginSuccessfullForAccountActivation(User user);
         User GetUserByEmail(string email); 
     }
 }

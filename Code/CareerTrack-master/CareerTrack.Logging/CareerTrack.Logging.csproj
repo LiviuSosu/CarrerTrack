@@ -50,6 +50,7 @@
     <Content Include="LoggingFiles\BrokenLinks\BrokenLinks.txt" />
     <Content Include="LoggingFiles\Companies\Companies.txt" />
     <Content Include="LoggingFiles\Skills\Skills.txt" />
+    <Content Include="LoggingFiles\Users\Users.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

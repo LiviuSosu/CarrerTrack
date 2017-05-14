@@ -64,7 +64,7 @@ namespace CarrerTrack.Web.Controllers
         [Authorize]
         public ActionResult Delete(Model.Skill skill)
         {
-            _skillCommandApp.Remove(skill.Id);
+            _skillCommandApp.Remove(skill.ID);
             return RedirectToAction("Index", "Skill");
         }
     }

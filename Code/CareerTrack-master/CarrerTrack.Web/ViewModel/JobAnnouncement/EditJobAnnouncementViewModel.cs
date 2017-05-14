@@ -15,7 +15,6 @@ namespace CarrerTrack.Web.ViewModel.JobAnnouncement
         public string Content { get; set; }
         public string Rewards { get; set; }
 
-        [Required(ErrorMessage = "Source is required")]
         [MaxLength(100, ErrorMessage = "The source can have up to 100 characters")]
         [MinLength(2, ErrorMessage = "The source must have at least 2 characters")]
         public string Source { get; set; }
@@ -26,32 +25,21 @@ namespace CarrerTrack.Web.ViewModel.JobAnnouncement
         [Display(Name = "Selected Skills")]
         public IEnumerable<Model.Skill> JobAnnouncementRequiredSkills { get; set; }
 
-        //public IEnumerable<SelectListItem> Skills { get; set; }
+        [Display(Name = "Location")]
+        public IEnumerable<Model.Location> Location { get; set; }
 
-        //[Required(ErrorMessage = "*")]
-        //[Display(Name = "Location")]
-        //public int LocationId { get; set; }
-        //public IEnumerable<SelectListItem> Location { get; set; }
+        [Display(Name = "Role")]
+        public IEnumerable<Model.Role> Role { get; set; }
 
-        //[Required(ErrorMessage = "*")]
-        //[Display(Name = "Role")]
-        //public int RoleId { get; set; }
-        //public IEnumerable<SelectListItem> Role { get; set; }
-
-        //[Required(ErrorMessage = "*")]
-        //[Display(Name = "Company")]
-        //public int CompanyId { get; set; }
-        //public IEnumerable<SelectListItem> Company { get; set; }
-
-        //public int UserId { get; set; }
-        //public virtual User user { get; set; }
-
-        //[Required(ErrorMessage = "*")]
-        //[Display(Name = "Company")]
-        //public string CompanyName { get; set; }
-        //public int CompanyId { get; set; }
+        [Required(ErrorMessage = "Please choose a company")]
+        [Display(Name = "Company")]
+        public string CompanyName { get; set; }
 
         //for mapping
         public string[] skillsSelectedValues { get; set; }
+        public int LocationId { get; set; }
+        public int RoleId { get; set; }
+        public int CompanyId { get; set; }
+        public int UserId { get; set; }
     }
 }

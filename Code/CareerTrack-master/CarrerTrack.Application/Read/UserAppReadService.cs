@@ -28,5 +28,10 @@ namespace CarrerTrack.Application.Read
         {
             return _commandUserService.GetUserByEmail(email);
         }
+
+        public bool IsLoginSuccessfullForAccountActivation(User user)
+        {
+            return _commandUserService.IsLoginSuccessfullForAccountActivation(user);
+        }
     }
 }

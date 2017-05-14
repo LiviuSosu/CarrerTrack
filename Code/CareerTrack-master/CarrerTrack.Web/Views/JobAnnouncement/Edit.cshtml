@@ -1,16 +1,14 @@
 ﻿@model CarrerTrack.Web.ViewModel.JobAnnouncement.EditJobAnnouncementViewModel
-
-<br/>
+<br />
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Edit this job announcement</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)
-
         <div class="form-group">
             @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -18,7 +16,6 @@
                 @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.Rewards, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -26,7 +23,6 @@
                 @Html.ValidationMessageFor(model => model.Rewards, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.Source, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -34,7 +30,6 @@
                 @Html.ValidationMessageFor(model => model.Source, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.Contact, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -42,58 +37,41 @@
                 @Html.ValidationMessageFor(model => model.Contact, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.Label("Required Skills", new { @class = "control-label col-md-2" })
             <div class="editor-field col-md-10">
-                @Html.ListBox("JobAnnouncementRequiredSkills", ViewBag.JobAnnouncementRequiredSkills as MultiSelectList,
+                @Html.ListBox("JobAnnouncementRequiredSkills", ViewBag.Countrieslist as MultiSelectList,
                    new { @class = "chzn-select", data_placeholder = "Please choose skills...", style = "width:350px;" })
             </div>
         </div>
 
-        @*<div class="form-group">
-            @Html.LabelFor(model => model.LocationId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                 @Html.DropDownListFor(model => model.LocationId, Model.Location, new {@class= "btn btn-default dropdown-toggle" })
-                @Html.ValidationMessageFor(model => model.LocationId, "", new { @class = "text-danger" })
+                @Html.DropDownList("Location", (SelectList)ViewBag.Genre, new { @class = "btn btn-default dropdown-toggle", @style = "width:350px;" })
+                @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
             </div>
-        </div>*@
+        </div>
 
-        @*<div class="form-group">
-            @Html.LabelFor(model => model.RoleId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Role, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.RoleId, Model.Role, new { @class = "btn btn-default dropdown-toggle" })
+                @Html.DropDownList("Role", (SelectList)ViewBag.Genre, new { @class = "btn btn-default dropdown-toggle" })
                 @Html.ValidationMessageFor(model => model.RoleId, "", new { @class = "text-danger" })
             </div>
-        </div>*@
+        </div>
 
-                    @*<div class="form-group">
-                        @Html.LabelFor(model => model.Company, new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.DropDownListFor(model => model.CompanyId, Model.Company, new { @class = "btn btn-default dropdown-toggle" })
-                        </div>
-                    </div>*@
-
-        @*<div class="form-group">
+        <div class="form-group">
             @Html.LabelFor(model => model.CompanyName, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => Model.CompanyName, new { @class = "form-control", @Value=Model.CompanyName })
+                @Html.TextBox("CompanyName", (string)ViewBag.CompanyName, null, new { @class = "form-control" })
                 @Html.HiddenFor(model => Model.CompanyId)
             </div>
-        </div>*@
-
-        @*<div class="form-group">
-            @Html.LabelFor(model => model.SelectedSkill, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.ListBoxFor(model => model.SelectedSkill, Model.Skills, new { @size = 15, @class = "btn btn-default dropdown-toggle" })
-                @Html.ValidationMessageFor(model => model.SelectedSkill, "", new { @class = "text-danger" })
-            </div>
-        </div>*@
-
+        </div>
         <div class="form-group">
             <div class="btn-group" aria-label="..." role="group">
                 <input type="submit" value="Save" class="btn btn-success" />
-                @Html.ActionLink("Cancel", "Index",null, new { @class="btn btn-default"})
+                @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-default" })
             </div>
         </div>
     </div>

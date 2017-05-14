@@ -38,11 +38,7 @@ namespace CarrerTrack.Web.ViewModel.JobAnnouncement
         public string CompanyName { get; set; }
         public int CompanyId { get; set; }
 
-
-        // public int UserId { get; set; }
-        //  public virtual User user { get; set; }
-
-            //for mapping
+        //for mapping
         public int RoleId { get; set; }
         public int LocationId { get; set; }
         public int UserId { get; set; }

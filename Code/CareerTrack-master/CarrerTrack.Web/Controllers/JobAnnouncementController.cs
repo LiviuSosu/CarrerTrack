@@ -112,15 +112,34 @@ namespace CarrerTrack.Web.Controllers
 
         [HttpPost]
         [Authorize]
-        public ActionResult Create(AddJobAnnouncementViewModel jobAnnouncement, FormCollection form)
+        public ActionResult Create( FormCollection form)
         {
             //IEnumerable<ModelError> allErrors = ModelState.Values.SelectMany(v => v.Errors);
+            //if (string.IsNullOrWhiteSpace(form["Content"]))
+            //{
+            //    ModelState.AddModelError("Content", "The content is required");
+            //}
+            //if (string.IsNullOrWhiteSpace(form["JobAnnouncementRequiredSkills"]))
+            //{
+            //    ModelState.AddModelError("Content", "Please enter at least a skill");
+            //}
+            //if (string.IsNullOrWhiteSpace(form["JobAnnouncementRequiredSkills"]))
+            //{
+            //    ModelState.AddModelError("Content", "Please enter at least a skill");
+            //}
             AddJobAnnouncementViewModel addJobAnnouncement = GetAddJobAnnouncementViewModel(form);
 
-            var _jobAnnouncement = MapAddJobAnnouncementViewModelToJobAnnouncement(addJobAnnouncement);
-            _jobAnnouncementCommandApp.Add(_jobAnnouncement);
-
-            return RedirectToAction("Index", "JobAnnouncement");
+            //if (ModelState.IsValid)
+            //{
+                var _jobAnnouncement = MapAddJobAnnouncementViewModelToJobAnnouncement(addJobAnnouncement);
+                _jobAnnouncementCommandApp.Add(_jobAnnouncement);
+                return RedirectToAction("Index", "JobAnnouncement");
+            //}
+            //else
+            //{
+            //    ModelState.AddModelError("", "Login data is incorrect");
+            //    return View(addJobAnnouncement);
+            //}
         }
 
         private AddJobAnnouncementViewModel GetAddJobAnnouncementViewModel(FormCollection form)
@@ -130,12 +149,13 @@ namespace CarrerTrack.Web.Controllers
             addJobAnnouncement.Content = form["Content"];
             addJobAnnouncement.Rewards = form["Rewards"];
             string lobAnnouncementRequiredSkills = form["JobAnnouncementRequiredSkills"];
+
             string[] skillIDs = lobAnnouncementRequiredSkills.Split(',');
             List<Model.Skill> skills = new List<Model.Skill>();
             foreach (var skillID in skillIDs)
             {
                 var skill = _readSkillService.GetById(Convert.ToInt32(skillID));
-                skills.Add(new Model.Skill { Id = skill.Id, Name = skill.Name });
+                skills.Add(new Model.Skill { ID = skill.Id, Name = skill.Name });
             }
             addJobAnnouncement.JobAnnouncementRequiredSkills = skills;
 
@@ -171,7 +191,7 @@ namespace CarrerTrack.Web.Controllers
             jobAnnouncement.Skills = new List<Skill>();
             foreach (var skill in addJobAnnouncement.JobAnnouncementRequiredSkills)
             {
-                jobAnnouncement.Skills.Add(new Skill { Id = skill.Id, Name = skill.Name });
+                jobAnnouncement.Skills.Add(new Skill { Id = skill.ID, Name = skill.Name });
             }
 
             return jobAnnouncement;
@@ -181,11 +201,6 @@ namespace CarrerTrack.Web.Controllers
         {
             var _skills = _readSkillService.GetAll();
             return new MultiSelectList(_skills, "Id", "Name", selectedValues);
-        }
-
-        private MultiSelectList GetJobAddSkillsForEdit(string[] selectedValues, JobAnnouncement jobAnnouncement)
-        {
-            return new MultiSelectList(jobAnnouncement.Skills, "Id", "Name", selectedValues);
         }
 
         [HttpGet]
@@ -221,15 +236,13 @@ namespace CarrerTrack.Web.Controllers
         {
             var _jobAnnouncement = _jobAnnouncementReadApp.GetById(id);
             EditJobAnnouncementViewModel jobAnnouncement = MapEditJobAnnouncemnetToEditJobAnnouncementViewModel(_jobAnnouncement);
-            string[] myStr = new string[2];
-            myStr[0] = "1";
-            myStr[1] = "4";
 
-            ViewBag.JobAnnouncementRequiredSkills = GetAllJobAddSkills(jobAnnouncement.skillsSelectedValues);
+            ViewBag.Countrieslist = GetAllJobAddSkills(jobAnnouncement.skillsSelectedValues);
 
-            //jobAnnouncement.Location = GetLocationsForDropDownControl();
-            //jobAnnouncement.Role = GetRolesForDropDownControl();
-            //jobAnnouncement.CompanyName = _jobAnnouncement.Company.CompanyName;
+            ViewBag.Location = new SelectList(jobAnnouncement.Location,"Id", "City", jobAnnouncement.LocationId);
+            ViewBag.Role = new SelectList(jobAnnouncement.Role, "Id", "Name", jobAnnouncement.RoleId);
+            ViewBag.CompanyName = jobAnnouncement.CompanyName;
+
             return View(jobAnnouncement);
         }
 
@@ -253,6 +266,15 @@ namespace CarrerTrack.Web.Controllers
             }
             jobAnnouncement.skillsSelectedValues = skills;
 
+            jobAnnouncement.LocationId = _jobAnnouncement.LocationId;
+            jobAnnouncement.Location = Mapper.Map<IEnumerable<Location>,IEnumerable<Model.Location>>(_readLocationService.GetUserLocations(loggedUser.UserId));
+
+            jobAnnouncement.RoleId = _jobAnnouncement.RoleId;
+            jobAnnouncement.Role = Mapper.Map<IEnumerable<Role>, IEnumerable<Model.Role>>(_readRoleService.GetUserRoles(loggedUser.UserId));
+
+            jobAnnouncement.CompanyName = _jobAnnouncement.Company.CompanyName;
+            jobAnnouncement.CompanyId = _jobAnnouncement.Company.CompanyId;
+
             return jobAnnouncement;
         }
 
@@ -260,8 +282,45 @@ namespace CarrerTrack.Web.Controllers
         [Authorize]
         public ActionResult Edit(FormCollection form)
         {
+            if (string.IsNullOrWhiteSpace(form["Source"]))
+            {
+                ModelState.AddModelError("Source", "Source is required.");
+            }
+            IEnumerable<ModelError> allErrors = ModelState.Values.SelectMany(v => v.Errors);
+            //validate the model http://dotnetslackers.com/articles/aspnet/Validating-Data-in-ASP-NET-MVC-Applications.aspx
+            JobAnnouncement _jobAnnouncement = MapFormToJobAnnouncement(form);
+            _jobAnnouncementCommandApp.UpdateJobAnnouncement(_jobAnnouncement);
 
             return RedirectToAction("Index", "JobAnnouncement");
+        }
+
+        private JobAnnouncement MapFormToJobAnnouncement(FormCollection form)
+        {
+            JobAnnouncement _jobAnnouncement = new JobAnnouncement();
+            _jobAnnouncement.UserId = loggedUser.UserId;
+
+            _jobAnnouncement.Id = Convert.ToInt32(form["Id"]);
+            _jobAnnouncement.Content = form["Content"];
+            _jobAnnouncement.Rewards = form["Rewards"];
+            _jobAnnouncement.Source = form["Source"];
+            _jobAnnouncement.Contact = form["Contact"];
+
+            string[] skillsIdsString = form["JobAnnouncementRequiredSkills"].Split(',');
+            List<Skill> skills = new List<Skill>();
+            foreach (string skillIdString in skillsIdsString)
+            {
+                var skill = _readSkillService.GetById(Convert.ToInt32(skillIdString));
+                skills.Add(skill);
+            }
+            _jobAnnouncement.Skills = skills;
+
+            _jobAnnouncement.LocationId = Convert.ToInt32(form["Location"]);
+            _jobAnnouncement.RoleId = Convert.ToInt32(form["Role"]);
+
+            string CompanyName = form["CompanyName"];
+            _jobAnnouncement.CompanyId = _readCompanyService.GetUserCompanies(loggedUser.UserId).Where(c=>c.CompanyName== CompanyName).FirstOrDefault().CompanyId;
+
+            return _jobAnnouncement;
         }
 
         private SelectList GetLocationsForDropDownControl()
@@ -305,11 +364,11 @@ namespace CarrerTrack.Web.Controllers
             var companies = Mapper.Map<IEnumerable<Company>, IEnumerable<Model.Company>>
                           (_readCompanyService.GetUserCompanies(loggedUser.UserId));
 
-            var objCustomerlist = companies.Where(c => c.CompanyName.ToUpper()
+            var companyList = companies.Where(c => c.CompanyName.ToUpper()
                             .Contains(term.ToUpper()))
                             .Select(c => new { Name = c.CompanyName, ID = c.CompanyId })
                             .Distinct().ToList();
-            return Json(objCustomerlist, JsonRequestBehavior.AllowGet);
+            return Json(companyList, JsonRequestBehavior.AllowGet);
         }
     }
 }

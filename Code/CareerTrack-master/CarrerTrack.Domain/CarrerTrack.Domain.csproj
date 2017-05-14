@@ -65,6 +65,7 @@
     <Compile Include="Entities\Skill.cs" />
     <Compile Include="Entities\UserTask.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Exceptions\UserNotAuthorizedToChangPassword.cs" />
     <Compile Include="Exceptions\UserNotLoggedInException.cs" />
     <Compile Include="Exceptions\UserPasswordDoesNotMatchException.cs" />
     <Compile Include="Interfaces\Command\ICommandArticleRepository.cs" />

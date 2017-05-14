@@ -12,9 +12,17 @@ namespace CarrerTrack.Data.Repositories.Command
 {
     public class CommandUserRepository : CommandRepositoryBase<User>, ICommandUserRepository
     {
-        //public void RegisterUser(User user)
-        //{
-        //    //throw new NotImplementedException("Register user nu este implementata");
-        //}
+        public void RegisterUser(User user)
+        {
+            var _user = db.Users.Where(u => u.Email == user.Email).First();
+            if(_user!=null)
+            {
+                throw new Exception("User already exits.");
+            }
+            else
+            {
+                db.Users.Add(_user);
+            }
+        }
     }
 }

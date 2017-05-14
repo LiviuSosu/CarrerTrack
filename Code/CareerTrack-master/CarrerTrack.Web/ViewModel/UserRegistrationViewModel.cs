@@ -30,19 +30,19 @@ namespace CarrerTrack.Web.ViewModel
 
         [Required(ErrorMessage = "This field is required")]
         [Display(Name = "Email")]
-        [MinLength(5, ErrorMessage = "Email must be at least 3 characters length")]
+        [MinLength(5, ErrorMessage = "Email must be at least 5 characters length")]
         [MaxLength(50, ErrorMessage = "Email must be at least 50 characters length")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "This field is required")]
         [Display(Name = "Password")]
-        [MinLength(5, ErrorMessage = "Password must be at least 3 characters length")]
+        [MinLength(5, ErrorMessage = "Password must be at least 5 characters length")]
         [MaxLength(20, ErrorMessage = "Password must be at least 20 characters length")]
         public string Password { get; set; }
 
         [Required(ErrorMessage = "This field is required")]
         [Display(Name ="Confirm password")]
-        [MinLength(5, ErrorMessage = "Password must be at least 3 characters length")]
+        [MinLength(5, ErrorMessage = "Password must be at least 5 characters length")]
         [MaxLength(20, ErrorMessage = "Password must be at least 20 characters length")]
         public string ConfirmPassword { get; set; }
 

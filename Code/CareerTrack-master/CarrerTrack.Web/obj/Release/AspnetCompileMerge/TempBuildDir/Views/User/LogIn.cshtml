@@ -1,5 +1,4 @@
 ﻿@model CarrerTrack.Web.ViewModel.UserLoginViewModel
-
 @{
     ViewBag.Title = "Log In";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,29 +6,35 @@
 @section CustomUtils {
     <link href="@Url.Content("~/Content/CustomUtils.css")" rel="stylesheet" />
 }
+<br/>
 
 <h2>Login</h2>
-
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true, "Login failed, check your credentials")
     {
-        <div>
-            <fieldset>
-                <div class="editor-label">@Html.LabelFor(u => u.Email)</div>
-                <div class="editor-field">
-                    @Html.TextBoxFor(u => u.Email)
-                    @Html.ValidationMessageFor(u => u.Email)
+        <div class="form-horizontal">
+            <hr />
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                 </div>
+            </div>
 
-                <div class="editor-label">@Html.LabelFor(u => u.Password)</div>
-                <div class="editor-field">
-                    @Html.PasswordFor(u => u.Password)
-                    @Html.ValidationMessageFor(u => u.Password)
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @type = "password" } })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
                 </div>
+            </div>
 
-              
-            </fieldset>
+            <input type="submit" id="btnSubmit" value="Log In" class="btn btn-primary" />
+            <br/>
+            <br/>
+            @Html.ActionLink("Forgot password ?","ForgotPassword", "User") &nbsp;&nbsp;&nbsp;@Html.ActionLink("Activate your account", "ActivateAccount", "User")
         </div>
     }
     <script src="~/Scripts/jquery-1.10.2.js"></script>
@@ -46,52 +51,49 @@
   background: red;" />
     </div>
 
-
-    <input type="submit" id="btnSubmit" value="Log In" class="btn btn-primary"/>
-
     <script>
 
-   $("#btnSubmit").click(function () {
+        $("#btnSubmit").click(function () {
 
-         $("#divLoader").show();
-       //https://social.technet.microsoft.com/wiki/contents/articles/34928.enable-ajax-loader-in-asp-net-mvc-5-step-by-step.aspx
-        //$.ajax({
+            $("#divLoader").show();
+            //https://social.technet.microsoft.com/wiki/contents/articles/34928.enable-ajax-loader-in-asp-net-mvc-5-step-by-step.aspx
+            //$.ajax({
 
-        //    url: '/Test/Submit',
+            //    url: '/Test/Submit',
 
-        //    dataType: "json",
+            //    dataType: "json",
 
-        //    type: "POST",
+            //    type: "POST",
 
-        //    contentType: 'application/json; charset=utf-8',
+            //    contentType: 'application/json; charset=utf-8',
 
-        //    data: {},
+            //    data: {},
 
-        //    //async: true,
+            //    //async: true,
 
-        //    //processData: false,
+            //    //processData: false,
 
-        //   // cache: false,
+            //   // cache: false,
 
-        //    success: function (data) {
+            //    success: function (data) {
 
-        //        $("#divLoader").hide();
+            //        $("#divLoader").hide();
 
-        //        alert(data);
+            //        alert(data);
 
-        //    },
+            //    },
 
-        //    error: function (xhr) {
+            //    error: function (xhr) {
 
-        //        $("#divLoader").hide();
+            //        $("#divLoader").hide();
 
-        //        alert('error');
+            //        alert('error');
 
-        //    }
+            //    }
 
-        //})
+            //})
 
-    });
+        });
 
     </script>
 }

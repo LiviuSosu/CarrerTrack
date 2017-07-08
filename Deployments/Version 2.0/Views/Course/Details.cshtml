@@ -1,0 +1,99 @@
+﻿@model CarrerTrack.Web.Model.Course
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section CustomUtils {
+    <link href="@Url.Content("~/Content/CustomUtils.css")" rel="stylesheet" />
+}
+
+
+<br/>
+
+<div>
+    <h4>Course details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Source)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Source)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Link)
+        </dt>
+
+        @if (!Model.Link.IsEmpty())
+        {
+        <dd>
+            @Html.DisplayFor(model => model.Link)
+        </dd>
+        }
+        else
+        {
+            <dd>
+                <p class="fieldInfoNotAvailable">link not available</p>
+            </dd>
+        }
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        @if (!Model.Description.IsEmpty())
+        {
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        }
+        else
+        {
+        <dd>
+            <p class="fieldInfoNotAvailable">description not available</p>
+        </dd>
+
+        }
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        @if (!Model.Notes.IsEmpty())
+        {
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+        }
+        else
+        {
+            <dd>
+                <p class="fieldInfoNotAvailable">Notes not available</p>
+            </dd>
+        }
+
+    </dl>
+</div>
+<div class="btn-group" role="group" aria-label="...">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new {@class="btn btn-warning" }) 
+    @Html.ActionLink("Back to list", "Index",null, new {@class="btn btn-default" })
+</div>

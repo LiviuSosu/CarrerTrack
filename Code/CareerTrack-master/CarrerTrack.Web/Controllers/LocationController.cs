@@ -29,7 +29,6 @@ namespace CarrerTrack.Web.Controllers
             loggedUser = Utils.LoggedUser.GetLoggedUser(_readUserService);
         }
 
-        // GET: Location
         [Authorize]
         public ActionResult Index()
         {

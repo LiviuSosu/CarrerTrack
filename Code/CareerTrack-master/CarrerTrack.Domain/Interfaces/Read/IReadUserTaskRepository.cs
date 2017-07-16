@@ -9,6 +9,11 @@ namespace CarrerTrack.Domain.Interfaces.Read
 {
     public interface IReadUserTaskRepository : IReadRepositoryBase<UserTask>
     {
-         IEnumerable<UserTask> GetUserTasks(int userId);
+        /// <summary>
+        /// Get all UserTasks for a given user id
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        IEnumerable<UserTask> GetUserTasks(int userId);
     }
 }

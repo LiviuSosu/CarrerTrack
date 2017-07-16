@@ -14,8 +14,6 @@ namespace CarrerTrack.Data.EntityConfig
         {
             HasKey(c => c.Id);
 
-            //HasMany(p=>p.JobAnnouncements).WithMany(p1 => p1.Skills); 
-
             Property(c => c.Name)
                 .IsRequired()
                 .HasMaxLength(150);

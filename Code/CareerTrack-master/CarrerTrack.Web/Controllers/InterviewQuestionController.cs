@@ -188,6 +188,10 @@ namespace CarrerTrack.Web.Controllers
             return RedirectToAction("Index", "InterviewQuestion");
         }
 
+        /// <summary>
+        /// Retrives companies for the dropdown when adding/editing a InterviewQuestion
+        /// </summary>
+        /// <returns></returns>
         private List<SelectListItem> GetCompaniesForDropDownControl()
         {
             List<SelectListItem> companies = new List<SelectListItem>();

@@ -24,7 +24,6 @@ namespace CarrerTrack.Web.Controllers
          //   similarStrings = new SimilarStrings();
         }
 
-        // GET: Skill
         [Authorize]
         public ActionResult Index()
         {

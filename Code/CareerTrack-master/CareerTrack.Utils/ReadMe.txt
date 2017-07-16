@@ -9,4 +9,5 @@ This project has various functionalities that comes on handy for various feature
 These funtionalities are stated bellow:
 
 1. Broken link: 
-	- purpose: detects if links from articles are broken or not.  
+	- purpose: detects if links from articles are broken or not.
+2. 

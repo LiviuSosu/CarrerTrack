@@ -9,6 +9,11 @@ namespace CarrerTrack.Domain.Interfaces.Read
 {
     public interface IReadBookRepository : IReadRepositoryBase<Book>
     {
+        /// <summary>
+        /// Returns all the Books for a given user
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         IEnumerable<Book> GetUserBooks(int userId);
     }
 }

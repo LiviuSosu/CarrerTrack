@@ -9,6 +9,11 @@ namespace CarrerTrack.Domain.Interfaces.Read.Services
 {
     public interface IReadCourseService : IReadServiceBase<Course>
     {
+        /// <summary>
+        /// Returns all the courses for a given user
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         IEnumerable<Course> GetUserCourse(int userId);
     }
 }

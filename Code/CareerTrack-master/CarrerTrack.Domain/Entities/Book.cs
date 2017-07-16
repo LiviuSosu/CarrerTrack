@@ -15,6 +15,9 @@ namespace CarrerTrack.Domain.Entities
         public string Status { get; set; }
         public string Description { get; set; }
 
+        /// <summary>
+        /// The following two properties are for storing a BLOB
+        /// </summary>
         public string ContentType { get; set; }
         public byte[] Content { get; set; }
 

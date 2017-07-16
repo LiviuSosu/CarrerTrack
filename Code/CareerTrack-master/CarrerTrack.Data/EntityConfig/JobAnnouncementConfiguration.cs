@@ -13,7 +13,6 @@ namespace CarrerTrack.Data.EntityConfig
         public JobAnnouncementConfiguration()
         {
             HasKey(c => c.Id);
-            //HasMany(p => p.Skills).WithMany(p1=>p1.JobAnnouncements);
 
             Property(c => c.RoleId)
                 .IsRequired();

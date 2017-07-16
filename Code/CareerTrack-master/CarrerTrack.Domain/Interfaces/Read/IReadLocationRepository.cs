@@ -9,6 +9,11 @@ namespace CarrerTrack.Domain.Interfaces.Read
 {
     public interface IReadLocationRepository : IReadRepositoryBase<Location>
     {
+        /// <summary>
+        /// Get all Locantions for the given user
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         IEnumerable<Location> GetUserLocations(int userId);
     }
 }

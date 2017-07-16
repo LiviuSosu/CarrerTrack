@@ -70,7 +70,7 @@ namespace CarrerTrack.Web.App_Start
         }
 
         /// <summary>
-        /// Load your modules or register your services here!
+        /// This is where I am loanding the modules for registration
         /// </summary>
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)

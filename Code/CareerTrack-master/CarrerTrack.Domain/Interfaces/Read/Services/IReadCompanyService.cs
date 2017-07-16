@@ -9,6 +9,11 @@ namespace CarrerTrack.Domain.Interfaces.Read.Services
 {
     public interface IReadCompanyService : IReadServiceBase<Company>
     {
+        /// <summary>
+        /// Get all the Companies for the given user
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         IEnumerable<Company> GetUserCompanies(int userId);
     }
 }

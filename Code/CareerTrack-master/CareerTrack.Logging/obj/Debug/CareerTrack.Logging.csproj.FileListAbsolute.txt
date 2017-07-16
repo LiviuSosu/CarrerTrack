@@ -3,3 +3,4 @@ C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\Ca
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CareerTrack.Logging\bin\Debug\CareerTrack.Logging.pdb
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CareerTrack.Logging\obj\Debug\CareerTrack.Logging.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CareerTrack.Logging\obj\Debug\CareerTrack.Logging.pdb
+C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CareerTrack.Logging\obj\Debug\CareerTrack.Logging.csprojResolveAssemblyReference.cache

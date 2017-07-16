@@ -172,6 +172,12 @@ namespace CarrerTrack.Web.Controllers
             return addJobAnnouncement;
         }
 
+        /// <summary>
+        /// The mapping is done manually for the moment, without using the automapper library. This mapping is required for service integration reasons.
+        /// A straightforward way will be done asap. 
+        /// </summary>
+        /// <param name="addJobAnnouncement"></param>
+        /// <returns></returns>
         private JobAnnouncement MapAddJobAnnouncementViewModelToJobAnnouncement(AddJobAnnouncementViewModel addJobAnnouncement)
         {
             JobAnnouncement jobAnnouncement = new JobAnnouncement();
@@ -246,6 +252,12 @@ namespace CarrerTrack.Web.Controllers
             return View(jobAnnouncement);
         }
 
+        /// <summary>
+        ///The mapping is done manually for the moment, without using the automapper library. This mapping is required for service integration reasons.
+        /// A straightforward way will be done asap. 
+        /// </summary>
+        /// <param name="_jobAnnouncement"></param>
+        /// <returns></returns>
         private EditJobAnnouncementViewModel MapEditJobAnnouncemnetToEditJobAnnouncementViewModel(JobAnnouncement _jobAnnouncement)
         {
             var jobAnnouncement = new EditJobAnnouncementViewModel();
@@ -294,6 +306,12 @@ namespace CarrerTrack.Web.Controllers
             return RedirectToAction("Index", "JobAnnouncement");
         }
 
+        /// <summary>
+        ///The mapping is done manually for the moment, without using the automapper library. This mapping is required for service integration reasons.
+        /// A straightforward way will be done asap. 
+        /// </summary>
+        /// <param name="form"></param>
+        /// <returns></returns>
         private JobAnnouncement MapFormToJobAnnouncement(FormCollection form)
         {
             JobAnnouncement _jobAnnouncement = new JobAnnouncement();
@@ -333,6 +351,10 @@ namespace CarrerTrack.Web.Controllers
             return new SelectList(locations, "Id", "City");
         }
 
+        /// <summary>
+        /// Retrieves the skills for a dropdown control used in creating/editing a job announcement
+        /// </summary>
+        /// <returns></returns>
         private List<SelectListItem> GetSkillsForDropDownControl()
         {
             List<SelectListItem> ls = new List<SelectListItem>();
@@ -358,6 +380,12 @@ namespace CarrerTrack.Web.Controllers
             return new SelectList(role, "Id", "Name");
         }
 
+        /// <summary>
+        /// This method is a helper for the autocomplete control. It returns the Company names.
+        /// </summary>
+        /// <param name="Companies"></param>
+        /// <param name="term"></param>
+        /// <returns></returns>
         public JsonResult GetCompanies(string Companies, string term = "")
         {
             //autocomplete http://stackoverflow.com/questions/37585676/autocomplete-dropdown-in-mvc5

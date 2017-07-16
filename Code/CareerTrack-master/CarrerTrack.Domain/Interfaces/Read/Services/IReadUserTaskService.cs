@@ -9,6 +9,11 @@ namespace CarrerTrack.Domain.Interfaces.Read.Services
 {
     public interface IReadUserTaskService : IReadServiceBase<UserTask>
     {
+        /// <summary>
+        /// Get all UserTasks for a given user id
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         IEnumerable<UserTask> GetUserTasks(int userId);
     }
 }

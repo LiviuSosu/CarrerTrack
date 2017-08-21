@@ -26,6 +26,8 @@ namespace CarrerTrack.Data.Repositories.Command
             _jobAnnouncement.CompanyId = jobAnnouncemnet.CompanyId;
 
             _jobAnnouncement.Skills = new List<Skill>();
+           // _jobAnnouncement.Skills.Clear();
+           // _jobAnnouncement.Skills = jobAnnouncemnet.Skills;
             foreach (var skill in jobAnnouncemnet.Skills)
             {
                 _jobAnnouncement.Skills.Add(db.Skills.Find(skill.Id));

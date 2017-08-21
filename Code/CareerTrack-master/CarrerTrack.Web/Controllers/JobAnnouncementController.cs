@@ -132,7 +132,7 @@ namespace CarrerTrack.Web.Controllers
             //if (ModelState.IsValid)
             //{
                 var _jobAnnouncement = MapAddJobAnnouncementViewModelToJobAnnouncement(addJobAnnouncement);
-                _jobAnnouncementCommandApp.Add(_jobAnnouncement);
+                _jobAnnouncementCommandApp.AddJobAnnouncement(_jobAnnouncement);
                 return RedirectToAction("Index", "JobAnnouncement");
             //}
             //else

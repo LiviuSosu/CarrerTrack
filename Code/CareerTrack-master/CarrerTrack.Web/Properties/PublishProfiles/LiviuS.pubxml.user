@@ -13,10 +13,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/12/2017 09:59:52</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>05/17/2017 05:39:00</publishTime>
+      <publishTime>07/31/2017 21:39:13</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>05/17/2017 05:39:00</publishTime>
+      <publishTime>07/31/2017 21:39:12</publishTime>
     </File>
     <File Include="bin/AutoMapper.dll">
       <publishTime>02/12/2017 09:59:52</publishTime>
@@ -25,16 +25,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/12/2017 09:59:52</publishTime>
     </File>
     <File Include="bin/CarrerTrack.Application.dll">
-      <publishTime>05/15/2017 06:50:37</publishTime>
+      <publishTime>07/31/2017 21:38:51</publishTime>
     </File>
     <File Include="bin/CarrerTrack.Data.dll">
-      <publishTime>05/15/2017 06:50:39</publishTime>
+      <publishTime>07/31/2017 21:38:52</publishTime>
     </File>
     <File Include="bin/CarrerTrack.Domain.dll">
-      <publishTime>05/15/2017 06:50:36</publishTime>
+      <publishTime>07/31/2017 21:38:50</publishTime>
     </File>
     <File Include="bin/CarrerTrack.Web.dll">
-      <publishTime>05/15/2017 06:50:43</publishTime>
+      <publishTime>07/31/2017 21:38:57</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>02/12/2017 09:59:52</publishTime>
@@ -208,7 +208,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/23/2017 19:05:11</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>05/17/2017 05:38:49</publishTime>
+      <publishTime>07/31/2017 21:39:02</publishTime>
     </File>
     <File Include="Scripts/AutocompleteHelper.js">
       <publishTime>04/30/2017 18:31:01</publishTime>
@@ -463,7 +463,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/30/2017 19:49:43</publishTime>
     </File>
     <File Include="Views/JobAnnouncement/Create.cshtml">
-      <publishTime>05/14/2017 22:01:52</publishTime>
+      <publishTime>07/29/2017 15:08:45</publishTime>
     </File>
     <File Include="Views/JobAnnouncement/Delete.cshtml">
       <publishTime>02/12/2017 09:59:52</publishTime>

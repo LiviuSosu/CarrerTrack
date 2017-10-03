@@ -29,5 +29,7 @@ namespace CarrerTrack.Domain.Entities
 
         public int CompanyId { get; set; }
         public virtual Company Company { get; set; }
+
+        public bool IsArchieved { get; set; }
     }
 }

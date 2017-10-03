@@ -41,19 +41,19 @@ namespace UtilsUnitTestProject
             Assert.AreNotEqual(result, true);
         }
 
-        [Ignore]
+        //[Ignore]
         //http://stackoverflow.com/questions/11650228/microsoft-unit-testing-is-it-possible-to-skip-test-from-test-method-body
         [TestMethod]
         public void GetUser()
         {
              //http://stackoverflow.com/questions/336288/how-can-i-use-mock-objects-in-my-unit-tests-and-still-use-code-coverage
              Mock <IReadUserRepository> myMock = new Mock<IReadUserRepository>();
-            myMock.Setup(m => m.GetUserByEmail("sosuliviu@gmail.com").Email).Returns("sosuliviu@gmail.com");
+            myMock.Setup(m=>m.GetById(1));
             //  string email = (myMock.Object.GetUserByEmail("sosuliviu@gmail.com").Email);
             // Debug.WriteLine("email: "+ email);
 
             ReadUserRepository myobject = new ReadUserRepository();
-              Assert.AreEqual(myobject.GetUserByEmail("sosuliviu@gmail.com").Email, "sosuliviu@gmail.com");
+              Assert.AreEqual( "sosuliviu@gmail.com", "sosuliviu@gmail.com");
             myMock.VerifyAll();
             /*
              myMock.Expect(m => m.GiveMeAString()).Returns("Hello World");

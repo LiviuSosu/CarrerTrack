@@ -84,6 +84,7 @@ namespace CarrerTrack.Domain.Services
         {
             string generatedString = RandomString(10);
 
+            ///Aspnet_regiis.exe
             SmtpClient client = new SmtpClient();
             client.Port = 587;
             client.Host = "smtp.gmail.com";

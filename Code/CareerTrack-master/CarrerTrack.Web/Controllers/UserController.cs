@@ -4,8 +4,6 @@ using CarrerTrack.Application.Read.Interface;
 using CarrerTrack.Domain.Entities;
 using CarrerTrack.Web.Utils;
 using CarrerTrack.Web.ViewModel;
-using System.Net.Mail;
-using System.Text;
 using System.Web.Mvc;
 using System.Web.Security;
 
@@ -64,7 +62,7 @@ namespace CarrerTrack.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = Mapper.Map<UserLoginViewModel, User>(userLoginViewModel);
+                var user = Mapper.Map<User>(userLoginViewModel);
                 if (_userReadApp.IsLoginSuccessfull(user))
                 {
                     //if(user.IsActive==false)

@@ -44,6 +44,9 @@ namespace CarrerTrack.Data.EntityConfig
 
             Property(c => c.UserId)
                .IsRequired();
+
+            Property(c => c.IsArchieved)
+                .IsRequired();
         }
     }
 }

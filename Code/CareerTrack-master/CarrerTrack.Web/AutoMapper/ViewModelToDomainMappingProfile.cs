@@ -7,32 +7,23 @@ namespace CarrerTrack.Web.AutoMapper
 {
     public class ViewModelToDomainMappingProfile : Profile
     {
-        public override string ProfileName
+        public ViewModelToDomainMappingProfile()
         {
-            get
-            {
-                return "DomainToViewModelMappings";
-            }
-        }
-
-        protected override void Configure()
-        {
-            Mapper.CreateMap<User, UserRegistrationViewModel>();
-            Mapper.CreateMap<User, UserLoginViewModel>();
-            Mapper.CreateMap<Model.Article, Article>();
-            Mapper.CreateMap<Model.UserTask, UserTask>();
-            Mapper.CreateMap<Model.Role, Role>();
-            Mapper.CreateMap<Model.Company, Company>();
-            Mapper.CreateMap<Model.Course,Course>();
-            Mapper.CreateMap<Model.Review, Review>();
-            Mapper.CreateMap<Model.Book, Book>();
-            Mapper.CreateMap<Model.Location, Location>();
-            Mapper.CreateMap<Model.Skill, Skill>();
-            Mapper.CreateMap<Model.InterviewQuestion, InterviewQuestion>();
-            Mapper.CreateMap<AddJobAnnouncementViewModel, JobAnnouncement>();
-            Mapper.CreateMap<EditJobAnnouncementViewModel, JobAnnouncement>();
-
-            Mapper.CreateMap<Model.User, User>();
+            CreateMap<User, UserRegistrationViewModel>();
+            CreateMap<User, UserLoginViewModel>();
+            CreateMap<Model.Article, Article>();
+            CreateMap<Model.UserTask, UserTask>();
+            CreateMap<Model.Role, Role>();
+            CreateMap<Model.Company, Company>();
+            CreateMap<Model.Course, Course>();
+            CreateMap<Model.Review, Review>();
+            CreateMap<Model.Book, Book>();
+            CreateMap<Model.Location, Location>();
+            CreateMap<Model.Skill, Skill>();
+            CreateMap<Model.InterviewQuestion, InterviewQuestion>();
+            CreateMap<AddJobAnnouncementViewModel, JobAnnouncement>();
+            CreateMap<EditJobAnnouncementViewModel, JobAnnouncement>();
+            CreateMap<Model.User, User>();
         }
     }
 }

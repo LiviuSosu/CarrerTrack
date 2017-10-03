@@ -45,13 +45,15 @@ namespace CarrerTrack.Web.Controllers
 
         // GET: JobAnnouncement
         [Authorize]
-        public ActionResult Index(string sortOrder, string currentFilter, int? page)
+        public ActionResult Index(string sortOrder, string currentFilter, int? page, bool? archived)
         {
             ViewBag.CurrentSort = sortOrder;
             ViewBag.RoleParameter = sortOrder == "Role" ? "RoleDesc" : "Role";
             ViewBag.LocationParameter = sortOrder == "Location" ? "LocationDesc" : "Location";
             ViewBag.CompanyParameter = sortOrder == "Company" ? "CompanyDesc" : "Company";
             ViewBag.DateAddedParameter = sortOrder == "DateAdded" ? "DateAddedDesc" : "DateAdded";
+
+            ViewBag.ArchievedSort = archived;
 
             //pulling the job announcements
             var _jobAnnouncements = _jobAnnouncementReadApp.GetAll();
@@ -85,6 +87,11 @@ namespace CarrerTrack.Web.Controllers
                     break;
                 default:
                     break;
+            }
+
+            if(archived == false)
+            {
+                jobAnnouncements = jobAnnouncements.Where(jobAdds=>jobAdds.IsArchieved == false);
             }
 
             int pageSize = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["NumberOfJobAnnouncementsPerPage"]);
@@ -397,6 +404,16 @@ namespace CarrerTrack.Web.Controllers
                             .Select(c => new { Name = c.CompanyName, ID = c.CompanyId })
                             .Distinct().ToList();
             return Json(companyList, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult Archive(int id)
+        {
+            return View();
+        }
+
+        public ActionResult Unarchive(int id)
+        {
+            return View();
         }
     }
 }

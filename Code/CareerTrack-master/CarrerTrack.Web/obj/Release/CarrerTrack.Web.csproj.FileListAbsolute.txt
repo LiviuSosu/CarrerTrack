@@ -1,4 +1,3 @@
-C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\AutoMapper.Net4.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\roslyn\csc.exe
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll

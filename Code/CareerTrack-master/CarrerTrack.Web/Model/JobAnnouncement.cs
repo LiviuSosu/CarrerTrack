@@ -39,5 +39,7 @@ namespace CarrerTrack.Web.Model
 
         [Display(Name = "Required skills")]
         public IEnumerable<Skill> Skills { get; set; }
+
+        public bool IsArchieved { get; set; }
     }
 }

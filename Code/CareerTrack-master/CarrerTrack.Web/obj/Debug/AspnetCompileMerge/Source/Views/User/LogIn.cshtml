@@ -1,0 +1,99 @@
+﻿@model CarrerTrack.Web.ViewModel.UserLoginViewModel
+@{
+    ViewBag.Title = "Log In";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section CustomUtils {
+    <link href="@Url.Content("~/Content/CustomUtils.css")" rel="stylesheet" />
+}
+<br/>
+
+<h2>Login</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Login failed, check your credentials")
+    {
+        <div class="form-horizontal">
+            <hr />
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @type = "password" } })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <input type="submit" id="btnSubmit" value="Log In" class="btn btn-primary" />
+            <br/>
+            <br/>
+            @Html.ActionLink("Forgot password ?","ForgotPassword", "User") &nbsp;&nbsp;&nbsp;@Html.ActionLink("Activate your account", "ActivateAccount", "User")
+        </div>
+    }
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+
+
+    <div id="divLoader" style="display:none;">
+        <img src="~/Content/Images/Loading/ajax-loader.gif" alt="Loader" style="  position: absolute;
+  /*width: 300px;
+  height: 200px;*/
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  background: red;" />
+    </div>
+
+    <script>
+
+        $("#btnSubmit").click(function () {
+
+            $("#divLoader").show();
+            //https://social.technet.microsoft.com/wiki/contents/articles/34928.enable-ajax-loader-in-asp-net-mvc-5-step-by-step.aspx
+            //$.ajax({
+
+            //    url: '/Test/Submit',
+
+            //    dataType: "json",
+
+            //    type: "POST",
+
+            //    contentType: 'application/json; charset=utf-8',
+
+            //    data: {},
+
+            //    //async: true,
+
+            //    //processData: false,
+
+            //   // cache: false,
+
+            //    success: function (data) {
+
+            //        $("#divLoader").hide();
+
+            //        alert(data);
+
+            //    },
+
+            //    error: function (xhr) {
+
+            //        $("#divLoader").hide();
+
+            //        alert('error');
+
+            //    }
+
+            //})
+
+        });
+
+    </script>
+}

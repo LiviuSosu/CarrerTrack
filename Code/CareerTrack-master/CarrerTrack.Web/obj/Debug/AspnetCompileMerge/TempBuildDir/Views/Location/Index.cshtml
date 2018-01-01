@@ -1,0 +1,53 @@
+﻿@model IEnumerable<CarrerTrack.Web.Model.Location>
+
+@section CustomUtils {
+    <link href="@Url.Content("~/Content/CustomUtils.css")" rel="stylesheet" />
+}
+
+<br/>
+<br />
+<br />
+<br />
+
+<p>
+    @Html.ActionLink("Add location", "Create", null, new { @class="btn btn-primary"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Details)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        @if (!item.Details.IsEmpty())
+        {
+        <td>
+            @Html.DisplayFor(modelItem => item.Details)
+        </td>
+        }
+        else
+        {
+            <td class="fieldInfoNotAvailable">
+                n/a
+            </td>
+        }
+        <td>
+            <div role="group" aria-label="..." class="btn-group">
+                @Html.ActionLink("Edit", "Edit", new {  id=item.Id  }, new  {@class="btn btn-warning" }) 
+                @Html.ActionLink("Details", "Details", new {  id=item.Id }, new { @class = "btn btn-info" }) 
+                @Html.ActionLink("Delete", "Delete", new {  id=item.Id }, new { @class = "btn btn-danger" })
+            </div>
+        </td>
+    </tr>
+}
+
+</table>

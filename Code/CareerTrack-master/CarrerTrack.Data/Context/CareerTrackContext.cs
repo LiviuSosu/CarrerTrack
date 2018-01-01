@@ -11,7 +11,7 @@ namespace CarrerTrack.Data.Context
     public class CareerTrackContext : DbContext
     {
         public CareerTrackContext()
-            : base("CareerTrack")
+            : base("CarrerTrack")
         {
 
         }
@@ -118,21 +118,6 @@ namespace CarrerTrack.Data.Context
                     entry.Property("Status").CurrentValue = "New";
                 }
             }
-
-            ////added broken link flag
-            //foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("DateAdded") != null))
-            //{
-            //    if (entry.State == EntityState.Added)
-            //    {
-            //        entry.Property("BrokenLink").CurrentValue = false;
-            //    }
-
-            //    if (entry.State == EntityState.Modified)
-            //    {
-            //        entry.Property("BrokenLink").IsModified = false;
-            //    }
-            //}
-
             return base.SaveChanges();
         }
     }

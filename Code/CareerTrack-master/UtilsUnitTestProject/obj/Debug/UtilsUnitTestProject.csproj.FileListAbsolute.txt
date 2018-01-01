@@ -21,3 +21,35 @@ C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\Ca
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\EntityFramework.xml
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\UtilsUnitTestProject\obj\Debug\UtilsUnitTestProject.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\UtilsUnitTestProject\obj\Debug\UtilsUnitTestProject.pdb
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\xunit.execution.desktop.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\UtilsUnitTestProject.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\UtilsUnitTestProject.pdb
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\CareerTrack.Utils.exe
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\CarrerTrack.Data.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\CarrerTrack.Domain.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\Castle.Core.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\Moq.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\xunit.core.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\CareerTrack.Logging.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\EntityFramework.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\SimpleCrypto.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\CareerTrack.Utils.pdb
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\CareerTrack.Utils.exe.config
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\CarrerTrack.Data.pdb
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\CarrerTrack.Data.dll.config
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\CarrerTrack.Domain.pdb
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\CarrerTrack.Domain.dll.config
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\Castle.Core.xml
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\Moq.xml
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\xunit.core.pdb
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\xunit.core.xml
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\CareerTrack.Logging.pdb
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\CareerTrack.Logging.dll.config
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\bin\Debug\EntityFramework.xml
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\obj\Debug\UtilsUnitTestProject.csprojResolveAssemblyReference.cache
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\obj\Debug\UtilsUnitTestProject.csproj.CoreCompileInputs.cache
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\obj\Debug\UtilsUnitTestProject.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\UtilsUnitTestProject\obj\Debug\UtilsUnitTestProject.pdb

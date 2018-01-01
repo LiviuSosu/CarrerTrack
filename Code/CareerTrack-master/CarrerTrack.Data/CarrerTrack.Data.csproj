@@ -92,9 +92,9 @@
     <Compile Include="Migrations\201704301449304_BrkineLinkIsNowOptional.Designer.cs">
       <DependentUpon>201704301449304_BrkineLinkIsNowOptional.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201708241330138_AddedIsArchivedJobAnnouncementColumnMigration.cs" />
-    <Compile Include="Migrations\201708241330138_AddedIsArchivedJobAnnouncementColumnMigration.Designer.cs">
-      <DependentUpon>201708241330138_AddedIsArchivedJobAnnouncementColumnMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201711071020399_LiveServer.cs" />
+    <Compile Include="Migrations\201711071020399_LiveServer.Designer.cs">
+      <DependentUpon>201711071020399_LiveServer.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -153,12 +153,14 @@
     <EmbeddedResource Include="Migrations\201704301449304_BrkineLinkIsNowOptional.resx">
       <DependentUpon>201704301449304_BrkineLinkIsNowOptional.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708241330138_AddedIsArchivedJobAnnouncementColumnMigration.resx">
-      <DependentUpon>201708241330138_AddedIsArchivedJobAnnouncementColumnMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711071020399_LiveServer.resx">
+      <DependentUpon>201711071020399_LiveServer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

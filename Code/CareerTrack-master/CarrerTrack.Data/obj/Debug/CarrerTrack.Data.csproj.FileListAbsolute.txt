@@ -57,3 +57,27 @@ C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\Ca
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.dll
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.pdb
 C:\Users\liviu.sosu\Work\Projects\Career Track\Career Track\Career-Track\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.AddedIsArchivedJobAnnouncementColumnMigration.resources
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.csprojResolveAssemblyReference.cache
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\CarrerTrack.Data.dll.config
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\CarrerTrack.Data.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\CarrerTrack.Data.pdb
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\CarrerTrack.Domain.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\EntityFramework.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\SimpleCrypto.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\CarrerTrack.Domain.pdb
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\CarrerTrack.Domain.dll.config
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\EntityFramework.xml
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.RenameKey.resources
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.RenameKey1.resources
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.RenameKey3.resources
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.CurrentMigration.resources
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.JobAddsLargerColumns.resources
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.AddedBrokenLinkFlagForArticle.resources
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.BrkineLinkIsNowOptional.resources
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.csproj.GenerateResource.Cache
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.csproj.CoreCompileInputs.cache
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.dll
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.pdb
+C:\Users\lsosu\Work\Proiecte\Personale\CareerTrack\CarrerTrack\Code\CareerTrack-master\CarrerTrack.Data\obj\Debug\CarrerTrack.Data.Migrations.LiveServer.resources

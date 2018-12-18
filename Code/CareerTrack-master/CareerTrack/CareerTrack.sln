@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeBase", "CodeBase", "{8FA0EDA8-ECD2-4828-B93D-60332039DC2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{0A127766-67C7-49C2-A8AB-6803EE3778B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerTrack.WebAPI", "CareerTrack.WebAPI\CareerTrack.WebAPI.csproj", "{DAE14D8B-B6B4-4851-8031-79D23804144C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAE14D8B-B6B4-4851-8031-79D23804144C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE14D8B-B6B4-4851-8031-79D23804144C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE14D8B-B6B4-4851-8031-79D23804144C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE14D8B-B6B4-4851-8031-79D23804144C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0A127766-67C7-49C2-A8AB-6803EE3778B5} = {8FA0EDA8-ECD2-4828-B93D-60332039DC2F}
+		{DAE14D8B-B6B4-4851-8031-79D23804144C} = {0A127766-67C7-49C2-A8AB-6803EE3778B5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {777069D7-4323-43D4-BE3B-74BDABE522ED}
+	EndGlobalSection
+EndGlobal
